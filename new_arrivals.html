@@ -6,9 +6,352 @@
     <meta name="robots" content="noindex, nofollow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/new_arrivals.css" />
     <title>New arrivals</title>
   </head>
   <body>
+    <header></header>
+    <main>
+      <h1>New arrivals</h1>
+      <aside class="filter">
+          <form action="#">
+            <label for="price">Price</label>
+            <input type="range" name="price" id="price" min="100" max="1000" />
+            <label for="colors" class="colors">
+              <div class="label-chevron">
+                <span>Colour</span> 
+                <!-- <img src="assets/images/icons/chevron-down.svg" alt="close icon" data-id="color"> -->
+                <div class="chevron" data-id="color"></div>
+              </div>
+            </label>
+            <select multiple name="color" id="color" class="select_hidden">
+              <option value="red">Red</option>
+              <option value="yellow">Yellow</option>
+              <option value="green">Green</option>
+              <option value="black">Black</option>
+              <option value="blue">Blue</option>
+              <option value="gray">Gray</option>
+              <option value="white">White</option>
+              <option value="beige">Beige</option>
+              <option value="brown">Brown</option>
+              <option value="burgundy">Burgundy</option>
+              <option value="purple">Purple</option>
+              <option value="pink">Pink</option>
+            </select>
+            <div class="select_divider"></div>
+            <label for="material" class="material">
+               <div class="label-chevron">
+                <span>Material</span> 
+                <!-- <img src="assets/images/icons/chevron-down.svg" alt="close icon" data-id="material"> -->
+                <div class="chevron" data-id="material"></div>
+              </div>
+            </label>
+            <select multiple name="material" id="material" class="select_hidden">
+              <option value="polyurethane">Polyurethane</option>
+              <option value="nylon">Nylon</option>
+              <option value="polyester">Polyester</option>
+              <option value="suede-calf-leather">Suede - Calf Leather</option>
+              <option value="calf-leather">Calf Leather</option>
+              <option value="rpet">rPET</option>
+              <option value="patent-pvc">Patent PVC</option>
+              <option value="polyethylene">Polyethylene</option>
+              <option value="lacquer">Lacquer</option>
+              <option value="metal">Metal</option>
+            </select>
+            <div class="select_divider"></div>
+            <label for="category" class="category">
+               <div class="label-chevron">
+                <span>Category</span> 
+                <!-- <img src="assets/images/icons/chevron-down.svg" alt="close icon" data-id="category"> -->
+                <div class="chevron" data-id="category"></div>
+              </div>
+            </label>
+            <select multiple name="category" id="category" class="select_hidden">
+              <option value="bumbags">Bumbags</option>
+              <option value="crossbody-bags">Crossbody bags</option>
+              <option value="wallets">Wallets</option>
+              <option value="mini-bags">Mini bags</option>
+              <option value="shoulder-bags">Shoulder bags</option>
+              <option value="tote-bags">Tote bags</option>
+              <option value="care">Care products</option>
+            </select>
+            <div class="select_divider"></div>
+            <label for="collections" class="collection">
+              <div class="label-chevron">
+                <span>Collections</span> 
+                <!-- <img src="assets/images/icons/chevron-down.svg" alt="close icon" data-id="collection"> -->
+                <div class="chevron" data-id="collection"></div>
+              </div>
+            </label>
+            <select multiple name="collection" id="collection" class="select_hidden">
+              <option value="snow-queen">Snow queen</option>
+              <option value="recycled">Recycled</option>
+              <option value="classic">Classic</option>
+            </select>
+            <div class="select_divider"></div>
+            <input type="submit" value="Apply filter" />
+          </form>
+        </section>
+      </aside>
+      <section class="products">
+        <div class="products_content">
+          <a href="#" class="products_link">
+            <article class="products_item">
+              <img
+                src="assets/images/hardcoded/bag1.jpg"
+                alt="alexandra"
+                class="products_thumbnail"
+              />
+              <h3 class="products_title">Alexandra</h3>
+              <p class="products_price">
+                <span class="sale_price"
+                  ><span class="sale_price_number">150</span> DKK</span
+                >&nbsp;<span class="regular_price"
+                  ><span class="regular_price_number">300</span> DKK</span
+                >
+              </p>
+              <div class="products_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+          <a href="#" class="products_link">
+            <article class="products_item">
+              <img
+                src="assets/images/hardcoded/bag2.jpg"
+                alt="alexandra"
+                class="products_thumbnail"
+              />
+              <h3 class="products_title">Alexandra</h3>
+              <p class="products_price">
+                <span class="sale_price"
+                  ><span class="sale_price_number">150</span> DKK</span
+                >&nbsp;<span class="regular_price"
+                  ><span class="regular_price_number"> 300</span> DKK</span
+                >
+              </p>
+              <div class="products_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+          <a href="#" class="products_link">
+            <article class="products_item">
+              <img
+                src="assets/images/hardcoded/bag3.jpg"
+                alt="alexandra"
+                class="products_thumbnail"
+              />
+              <h3 class="products_title">Alexandra</h3>
+              <p class="products_price">
+                <span class="sale_price"
+                  ><span class="sale_price_number">150</span> DKK</span
+                >&nbsp;<span class="regular_price"
+                  ><span class="regular_price_number"> 300</span> DKK</span
+                >
+              </p>
+              <div class="products_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+          <a href="#" class="products_link">
+            <article class="products_item">
+              <img
+                src="assets/images/hardcoded/bag4.jpg"
+                alt="alexandra"
+                class="products_thumbnail"
+              />
+              <h3 class="products_title">Alexandra</h3>
+              <p class="products_price">
+                <span class="sale_price"
+                  ><span class="sale_price_number">150</span> DKK</span
+                ><span class="regular_price"
+                  >&nbsp;<span class="regular_price_number"> 300</span> DKK</span
+                >
+              </p>
+              <div class="products_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+          <a href="#" class="products_link">
+            <article class="products_item">
+              <img
+                src="assets/images/hardcoded/bag1.jpg"
+                alt="alexandra"
+                class="products_thumbnail"
+              />
+              <h3 class="products_title">Alexandra</h3>
+              <p class="products_price">
+                <span class="sale_price"
+                  ><span class="sale_price_number">150</span> DKK</span
+                ><span class="regular_price"
+                  >&nbsp;<span class="regular_price_number"> 300</span> DKK</span
+                >
+              </p>
+              <div class="products_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+          <a href="#" class="products_link">
+            <article class="products_item">
+              <img
+                src="assets/images/hardcoded/bag2.jpg"
+                alt="alexandra"
+                class="products_thumbnail"
+              />
+              <h3 class="products_title">Alexandra</h3>
+              <p class="products_price">
+                <span class="sale_price"
+                  ><span class="sale_price_number">150</span> DKK</span
+                ><span class="regular_price"
+                  >&nbsp;<span class="regular_price_number"> 300</span> DKK</span
+                >
+              </p>
+              <div class="products_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+          <a href="#" class="products_link">
+            <article class="products_item">
+              <img
+                src="assets/images/hardcoded/bag3.jpg"
+                alt="alexandra"
+                class="products_thumbnail"
+              />
+              <h3 class="products_title">Alexandra</h3>
+              <p class="products_price">
+                <span class="sale_price"
+                  ><span class="sale_price_number">150</span> DKK</span
+                >&nbsp;<span class="regular_price"
+                  ><span class="regular_price_number"> 300</span> DKK</span
+                >
+              </p>
+              <div class="products_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+          <a href="#" class="products_link">
+            <article class="products_item">
+              <img
+                src="assets/images/hardcoded/bag4.jpg"
+                alt="alexandra"
+                class="products_thumbnail"
+              />
+              <h3 class="products_title">Alexandra</h3>
+              <p class="products_price">
+                <span class="sale_price"
+                  ><span class="sale_price_number">150</span> DKK</span
+                >&nbsp;<span class="regular_price"
+                  ><span class="regular_price_number"> 300</span> DKK</span
+                >
+              </p>
+              <div class="products_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+          <a href="#" class="products_link">
+            <article class="products_item">
+              <img
+                src="assets/images/hardcoded/bag1.jpg"
+                alt="alexandra"
+                class="products_thumbnail"
+              />
+              <h3 class="products_title">Alexandra</h3>
+              <p class="products_price">
+                <span class="sale_price"
+                  ><span class="sale_price_number">150</span> DKK</span
+                >&nbsp;<span class="regular_price"
+                  ><span class="regular_price_number"> 300</span> DKK</span
+                >
+              </p>
+              <div class="products_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+          <a href="#" class="products_link">
+            <article class="products_item">
+              <img
+                src="assets/images/hardcoded/bag2.jpg"
+                alt="alexandra"
+                class="products_thumbnail"
+              />
+              <h3 class="products_title">Alexandra</h3>
+              <p class="products_price">
+                <span class="sale_price"
+                  ><span class="sale_price_number">150</span> DKK</span
+                >&nbsp;<span class="regular_price"
+                  ><span class="regular_price_number"> 300</span> DKK</span
+                >
+              </p>
+              <div class="products_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+          <a href="#" class="products_link">
+            <article class="products_item">
+              <img
+                src="assets/images/hardcoded/bag3.jpg"
+                alt="alexandra"
+                class="products_thumbnail"
+              />
+              <h3 class="products_title">Alexandra</h3>
+              <p class="products_price">
+                <span class="sale_price"
+                  ><span class="sale_price_number">150</span> DKK</span
+                >&nbsp;<span class="regular_price"
+                  ><span class="regular_price_number"> 300</span> DKK</span
+                >
+              </p>
+              <div class="products_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+          <a href="#" class="products_link">
+            <article class="products_item">
+              <img
+                src="assets/images/hardcoded/bag4.jpg"
+                alt="alexandra"
+                class="products_thumbnail"
+              />
+              <h3 class="products_title">Alexandra</h3>
+              <p class="products_price">
+                <span class="sale_price"
+                  ><span class="sale_price_number">150</span> DKK</span
+                >&nbsp;<span class="regular_price"
+                  ><span class="regular_price_number"> 300</span> DKK</span
+                >
+              </p>
+              <div class="products_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+        </div>
+        <footer class="products_footer">
+          <span>1</span>
+          <span>2</span>
+          <span>...</span>
+          <span>
+            <img
+              src="assets/images/icons/arrow_right.svg"
+              alt="arrow right"
+              class="icon_pagination"
+            />
+          </span>
+        </footer>
+      </section>
+    </main>
+    <footer></footer>
     <script src="js/main.js"></script>
+    <script src="js/new_arrivals.js"></script>
   </body>
 </html>
