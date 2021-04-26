@@ -57,12 +57,82 @@ select {
   overflow-y: auto;
 }
 
-select#color {
-  height: calc(1.9rem * 12);
-  display: block;
+aside.filter > form div#color {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  /* position: relative; */
 }
-select#color.select_hidden {
+
+aside.filter > form div#color.select_hidden {
   display: none;
+}
+
+aside.filter > form input[type="checkbox"] {
+  visibility: hidden;
+}
+
+aside.filter > form label.check {
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+aside.filter > form label.check_red {
+  background-color: red;
+}
+
+aside.filter > form label.check_blue {
+  background-color: blue;
+}
+
+aside.filter > form label.check_black {
+  background-color: black;
+}
+
+aside.filter > form label.check_yellow {
+  background-color: yellow;
+}
+
+aside.filter > form label.check_green {
+  background-color: green;
+}
+
+aside.filter > form label.check_gray {
+  background-color: gray;
+}
+
+aside.filter > form label.check_white {
+  background-color: white;
+}
+
+aside.filter > form label.check_beige {
+  background-color: #e1c699;
+}
+
+aside.filter > form label.check_brown {
+  background-color: #964b00;
+}
+
+aside.filter > form label.check_burgundy {
+  background-color: #800020;
+}
+
+aside.filter > form label.check_purple {
+  background-color: purple;
+}
+
+aside.filter > form label.check_pink {
+  background-color: pink;
+}
+
+aside.filter > form input[type="checkbox"]:checked + label.check {
+  border: 2px solid #adadac;
 }
 
 select#material {
@@ -130,7 +200,7 @@ input[type="submit"] {
   border: 1px solid var(--dark-blue);
   font-family: var(--body-text);
   font-size: 1.5rem;
-  margin: 4rem auto;
+  margin: 4rem 0;
   width: 12rem;
   height: 4rem;
   cursor: pointer;

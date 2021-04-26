@@ -24,20 +24,32 @@
                 <div class="chevron" data-id="color"></div>
               </div>
             </label>
-            <select multiple name="color" id="color" class="select_hidden">
-              <option value="red">Red</option>
-              <option value="yellow">Yellow</option>
-              <option value="green">Green</option>
-              <option value="black">Black</option>
-              <option value="blue">Blue</option>
-              <option value="gray">Gray</option>
-              <option value="white">White</option>
-              <option value="beige">Beige</option>
-              <option value="brown">Brown</option>
-              <option value="burgundy">Burgundy</option>
-              <option value="purple">Purple</option>
-              <option value="pink">Pink</option>
-            </select>
+              <div id="color" class="select_hidden">
+                <input type="checkbox" name="red" id="red" >
+                <label for="red" class="check check_red"></label>
+                <input type="checkbox" name="blue" id="blue" >
+                <label for="blue" class="check check_blue"></label>
+                <input type="checkbox" name="black" id="black" >
+                <label for="black" class="check check_black"></label>
+                <input type="checkbox" name="yellow" id="yellow" >
+                <label for="yellow" class="check check_black"></label>
+                <input type="checkbox" name="green" id="green" >
+                <label for="green" class="check check_green"></label>
+                <input type="checkbox" name="gray" id="gray" >
+                <label for="gray" class="check check_gray"></label>
+                <input type="checkbox" name="white" id="white" >
+                <label for="white" class="check check_white"></label>
+                <input type="checkbox" name="beige" id="beige" >
+                <label for="beige" class="check check_beige"></label>
+                <input type="checkbox" name="brown" id="brown" >
+                <label for="brown" class="check check_brown"></label>
+                <input type="checkbox" name="burgundy" id="burgundy" >
+                <label for="burgundy" class="check check_burgundy"></label>
+                <input type="checkbox" name="purple" id="purple" >
+                <label for="purple" class="check check_purple"></label>
+                <input type="checkbox" name="pink" id="pink" >
+                <label for="pink" class="check check_pink"></label>
+              </div>
             <div class="select_divider"></div>
             <label for="material" class="material">
                <div class="label-chevron">
@@ -89,7 +101,7 @@
               <option value="classic">Classic</option>
             </select>
             <div class="select_divider"></div>
-            <input type="submit" value="Apply filter" />
+            <input type="submit" value="Apply filter" class="filter_submit"/>
           </form>
         </section>
       </aside>
