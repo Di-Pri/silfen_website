@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Roboto:wght@500;900&display=swap");
+
+:root {
+  --body-text: "Manrope", sans-serif;
+  --headings-text: "Roboto", sans-serif;
+  --blue: #7bafd4;
+  --dark-blue: #175a8a;
+  --font-color: #656b65;
+}
+
+body {
+  background-color: #f8f8f8;
+}
