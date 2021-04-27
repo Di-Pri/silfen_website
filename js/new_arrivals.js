@@ -1,17 +1,17 @@
 document
   .querySelector("label.colors .chevron")
-  .addEventListener("click", closeFilterSection);
+  .addEventListener("click", openFilterSection);
 document
   .querySelector("label.material .chevron")
-  .addEventListener("click", closeFilterSection);
+  .addEventListener("click", openFilterSection);
 document
   .querySelector("label.category .chevron")
-  .addEventListener("click", closeFilterSection);
+  .addEventListener("click", openFilterSection);
 document
   .querySelector("label.collection .chevron")
-  .addEventListener("click", closeFilterSection);
+  .addEventListener("click", openFilterSection);
 
-function closeFilterSection() {
+function openFilterSection() {
   console.log(this.dataset.id);
   const filterID = this.dataset.id;
   document.querySelector("#" + filterID).classList.toggle("select_hidden");

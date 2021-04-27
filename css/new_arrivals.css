@@ -74,65 +74,125 @@ aside.filter > form input[type="checkbox"] {
   visibility: hidden;
 }
 
-aside.filter > form label.check {
+aside.filter > form div.check {
   /* position: absolute;
   top: 0;
   left: 0; */
   width: 3rem;
   height: 3rem;
   cursor: pointer;
+  margin: 1rem;
+  margin-left: 0;
+  position: relative;
+  /* box-shadow: 0.5px 0.5px 5px 0px rgba(51, 51, 51, 0.54); */
+}
+
+aside.filter > form div.check > input,
+aside.filter > form div.check > label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
 }
 
 aside.filter > form label.check_red {
   background-color: red;
+  width: 100%;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
 }
 
 aside.filter > form label.check_blue {
   background-color: blue;
+  width: 100%;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
 }
 
 aside.filter > form label.check_black {
   background-color: black;
+  width: 100%;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
 }
 
 aside.filter > form label.check_yellow {
   background-color: yellow;
+  width: 100%;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
 }
 
 aside.filter > form label.check_green {
   background-color: green;
+  width: 100%;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
 }
 
 aside.filter > form label.check_gray {
   background-color: gray;
+  width: 100%;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
 }
 
 aside.filter > form label.check_white {
   background-color: white;
+  width: 100%;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
 }
 
 aside.filter > form label.check_beige {
   background-color: #e1c699;
+  width: 100%;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
 }
 
 aside.filter > form label.check_brown {
   background-color: #964b00;
+  width: 100%;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
 }
 
 aside.filter > form label.check_burgundy {
   background-color: #800020;
+  width: 100%;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
 }
 
 aside.filter > form label.check_purple {
   background-color: purple;
+  width: 100%;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
 }
 
 aside.filter > form label.check_pink {
   background-color: pink;
+  width: 100%;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
 }
 
-aside.filter > form input[type="checkbox"]:checked + label.check {
-  border: 2px solid #adadac;
+aside.filter > form input[type="checkbox"]:checked + label {
+  border: 3px solid #e6e6e6;
 }
 
 select#material {
