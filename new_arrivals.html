@@ -14,9 +14,41 @@
     <main>
       <h1>New arrivals</h1>
       <aside class="filter">
-          <form action="#">
-            <label for="price">Price</label>
-            <input type="range" name="price" id="price" min="49" max="799" />
+          <form action="#" id="filter_form">
+            <!-- <label for="price">Price</label>
+            <input type="range" name="price" id="price" min="49" max="799" /> -->
+            <label class="price_label"> Price</label>
+            <div class="middle">
+              
+              <div class="multi-range-slider">
+                <input
+                  type="range"
+                  name="price-from"
+                  id="input-left"
+                  min="49"
+                  max="799"
+                  value="200"
+                />
+                <label for="input-left" class="label-left"><span>200</span> DKK</label>
+
+                <input
+                  type="range"
+                  name="price-to"
+                  id="input-right"
+                  min="49"
+                  max="799"
+                  value="600"
+                />
+                <label for="input-right" class="label-right"><span>600</span> DKK</label>
+
+                <div class="slider">
+                  <div class="track"></div>
+                  <div class="range"></div>
+                  <div class="thumb left"></div>
+                  <div class="thumb right"></div>
+                </div>
+              </div>
+          </div>
             <label for="colors" class="colors">
               <div class="label-chevron">
                 <span>Colour</span> 
