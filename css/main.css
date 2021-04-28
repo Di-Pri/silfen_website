@@ -16,6 +16,11 @@ body {
   margin: 0;
 }
 
+.active {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
 header {
   background-color: var(--bg-color);
   position: fixed;
@@ -42,13 +47,12 @@ header img {
   height: 24px;
 }
 
-.logo {
+.logo_width {
   width: 100%;
 }
 
 .logo img {
   height: 27px;
-  width: 100%;
 }
 
 .menu_second_line {
@@ -76,9 +80,22 @@ header img {
   margin: 1.2rem;
 }
 
-.active {
-  text-decoration: underline;
-  text-underline-position: under;
+.search_box {
+  position: absolute;
+  height: 15px;
+  border-bottom: 2px solid #8e8e8e;
+  padding: 0.7rem;
+  margin-top: -0.6rem;
+}
+
+.search_text {
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 1rem;
+  color: var(--font-color);
+  float: left;
+  width: 210px;
 }
 
 .hidden,
@@ -87,9 +104,17 @@ header img {
   display: none;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
   .menu_dropdown:hover ul {
     display: block;
+  }
+
+  #search_icon_id:hover + .search_box {
+    display: inline;
+  }
+
+  .search_box:hover {
+    display: inline;
   }
 }
 
@@ -132,6 +157,7 @@ header img {
   .menu_mobile_arrows img {
     height: 10px;
   }
+
   .menu_dropdown ul {
     position: relative;
     margin: 3.5rem 1rem -2rem 1rem;
@@ -145,5 +171,6 @@ header img {
     display: block;
     float: right;
     margin: 1.1rem 1.3rem;
+    height: 28px;
   }
 }

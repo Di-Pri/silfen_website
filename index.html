@@ -19,12 +19,26 @@
         <a class="danish_flag" href="#"
           ><img src="assets/images/icons/danishflag.svg" alt="DA"
         /></a>
-        <a class="search" href="#"
-          ><img src="assets/images/icons/search.svg" alt="Search"
-        /></a>
-        <a class="logo" href="index.html"
-          ><img src="assets/images/icons/logo.svg" alt="Silfen"
-        /></a>
+        <div class="search">
+          <img
+            id="search_icon_id"
+            src="assets/images/icons/search.svg"
+            alt="Search"
+          />
+          <div class="search_box hidden">
+            <input
+              class="search_text"
+              type="text"
+              name="search_item"
+              placeholder="Type to search"
+            />
+          </div>
+        </div>
+        <div class="logo_width">
+          <a class="logo" href="index.html"
+            ><img src="assets/images/icons/logo.svg" alt="Silfen"
+          /></a>
+        </div>
         <a class="heart" href="#"
           ><img src="assets/images/icons/heart.svg" alt="Liked"
         /></a>
@@ -46,7 +60,7 @@
           alt="DA"
         />
         <ul>
-          <li><a class="active" href="new_arrivals.html">New arrivals</a></li>
+          <li><a href="new_arrivals.html">New arrivals</a></li>
           <li class="menu_dropdown">
             <a href="#">All bags</a>
             <div class="menu_mobile_arrows">
@@ -99,11 +113,6 @@
         </ul>
       </nav>
     </header>
-
-    <main>
-      <img src="assets/images/photos/plastic.jpg" alt="" />
-      <img src="assets/images/photos/plastic.jpg" alt="" />
-    </main>
 
     <script src="js/main.js"></script>
   </body>
