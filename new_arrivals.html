@@ -6,9 +6,559 @@
     <meta name="robots" content="noindex, nofollow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/new_arrivals.css" />
     <title>New arrivals</title>
   </head>
   <body>
+    <header></header>
+    <main>
+      <h1>New arrivals</h1>
+      <aside class="filter">
+        <form action="#" id="filter_form">
+          <label class="price_label"> Price</label>
+          <div class="middle">
+            <div class="multi-range-slider">
+              <input
+                type="range"
+                name="price-from"
+                id="input-left"
+                min="49"
+                max="799"
+                value="200"
+              />
+              <label for="input-left" class="label-left"
+                ><span>200</span> DKK</label
+              >
+
+              <input
+                type="range"
+                name="price-to"
+                id="input-right"
+                min="49"
+                max="799"
+                value="600"
+              />
+              <label for="input-right" class="label-right"
+                ><span>600</span> DKK</label
+              >
+
+              <div class="slider">
+                <div class="track"></div>
+                <div class="range"></div>
+                <div class="thumb left"></div>
+                <div class="thumb right"></div>
+              </div>
+            </div>
+          </div>
+          <label for="colors" class="colors">
+            <div class="label-chevron">
+              <span>Colour</span>
+              <!-- <img src="assets/images/icons/chevron-down.svg" alt="close icon" data-id="color"> -->
+              <div class="chevron" data-id="color"></div>
+            </div>
+          </label>
+          <div id="color" class="select_hidden">
+            <div class="check">
+              <input type="checkbox" name="red" id="red" />
+              <label for="red" class="check_red"></label>
+            </div>
+            <div class="check">
+              <input type="checkbox" name="blue" id="blue" />
+              <label for="blue" class="check_blue"></label>
+            </div>
+            <div class="check">
+              <input type="checkbox" name="black" id="black" />
+              <label for="black" class="check_black"></label>
+            </div>
+            <div class="check">
+              <input type="checkbox" name="yellow" id="yellow" />
+              <label for="yellow" class="check_yellow"></label>
+            </div>
+            <div class="check">
+              <input type="checkbox" name="green" id="green" />
+              <label for="green" class="check_green"></label>
+            </div>
+            <div class="check">
+              <input type="checkbox" name="gray" id="gray" />
+              <label for="gray" class="check_gray"></label>
+            </div>
+            <div class="check">
+              <input type="checkbox" name="white" id="white" />
+              <label for="white" class="check_white"></label>
+            </div>
+            <div class="check">
+              <input type="checkbox" name="beige" id="beige" />
+              <label for="beige" class="check_beige"></label>
+            </div>
+            <div class="check">
+              <input type="checkbox" name="brown" id="brown" />
+              <label for="brown" class="check_brown"></label>
+            </div>
+            <div class="check">
+              <input type="checkbox" name="burgundy" id="burgundy" />
+              <label for="burgundy" class="check_burgundy"></label>
+            </div>
+            <div class="check">
+              <input type="checkbox" name="purple" id="purple" />
+              <label for="purple" class="check_purple"></label>
+            </div>
+            <div class="check">
+              <input type="checkbox" name="pink" id="pink" />
+              <label for="pink" class="check_pink"></label>
+            </div>
+          </div>
+          <div class="select_divider"></div>
+          <label for="material" class="material">
+            <div class="label-chevron">
+              <span>Material</span>
+              <div class="chevron" data-id="material"></div>
+            </div>
+          </label>
+          <select multiple name="material" id="material" class="select_hidden">
+            <option value="polyurethane">Polyurethane</option>
+            <option value="nylon">Nylon</option>
+            <option value="polyester">Polyester</option>
+            <option value="suede-calf-leather">Suede - Calf Leather</option>
+            <option value="calf-leather">Calf Leather</option>
+            <option value="rpet">rPET</option>
+            <option value="patent-pvc">Patent PVC</option>
+            <option value="polyethylene">Polyethylene</option>
+            <option value="lacquer">Lacquer</option>
+            <option value="metal">Metal</option>
+          </select>
+          <div class="select_divider"></div>
+          <label for="category" class="category">
+            <div class="label-chevron">
+              <span>Category</span>
+              <!-- <img src="assets/images/icons/chevron-down.svg" alt="close icon" data-id="category"> -->
+              <div class="chevron" data-id="category"></div>
+            </div>
+          </label>
+          <select multiple name="category" id="category" class="select_hidden">
+            <option value="bumbags">Bumbags</option>
+            <option value="crossbody-bags">Crossbody bags</option>
+            <option value="wallets">Wallets</option>
+            <option value="mini-bags">Mini bags</option>
+            <option value="shoulder-bags">Shoulder bags</option>
+            <option value="tote-bags">Tote bags</option>
+            <option value="care">Care products</option>
+          </select>
+          <div class="select_divider"></div>
+          <label for="collections" class="collection">
+            <div class="label-chevron">
+              <span>Collections</span>
+              <!-- <img src="assets/images/icons/chevron-down.svg" alt="close icon" data-id="collection"> -->
+              <div class="chevron" data-id="collection"></div>
+            </div>
+          </label>
+          <select
+            multiple
+            name="collection"
+            id="collection"
+            class="select_hidden"
+          >
+            <option value="snow-queen">Snow queen</option>
+            <option value="recycled">Recycled</option>
+            <option value="classic">Classic</option>
+          </select>
+          <div class="select_divider"></div>
+          <input type="submit" value="Apply filter" class="filter_submit" />
+        </form>
+        <div class="filter_heading_mobile">
+          <h2>Filter</h2>
+          <img
+            src="assets/images/icons/filter.svg"
+            alt="filter icon"
+            class="filter_open_btn"
+          />
+        </div>
+        <div class="filter_mobile closed">
+          <div class="filter_close_btn">&times;</div>
+          <form action="#" id="filter_form_mobile">
+            <div class="price_wrapper">
+              <label for="price_mobile" class="heading_label">Price</label>
+              <input
+                type="text"
+                name="price-from"
+                id="price_from_mobile"
+                placeholder="49"
+              />
+              <span> - </span>
+              <input
+                type="text"
+                name="price-to"
+                id="price_to_mobile"
+                placeholder="799"
+              />
+            </div>
+            <label class="heading_label" for="color_mobile">Colours</label>
+            <div id="color_mobile">
+              <div class="check">
+                <input type="checkbox" name="red" id="red_mobile" />
+                <label for="red_mobile" class="check_red"></label>
+              </div>
+              <div class="check">
+                <input type="checkbox" name="blue" id="blue_mobile" />
+                <label for="blue_mobile" class="check_blue"></label>
+              </div>
+              <div class="check">
+                <input type="checkbox" name="black" id="black_mobile" />
+                <label for="black_mobile" class="check_black"></label>
+              </div>
+              <div class="check">
+                <input type="checkbox" name="yellow" id="yellow_mobile" />
+                <label for="yellow_mobile" class="check_yellow"></label>
+              </div>
+              <div class="check">
+                <input type="checkbox" name="green" id="green_mobile" />
+                <label for="green_mobile" class="check_green"></label>
+              </div>
+              <div class="check">
+                <input type="checkbox" name="gray" id="gray_mobile" />
+                <label for="gray_mobile" class="check_gray"></label>
+              </div>
+              <div class="check">
+                <input type="checkbox" name="white" id="white_mobile" />
+                <label for="white_mobile" class="check_white"></label>
+              </div>
+              <div class="check">
+                <input type="checkbox" name="beige" id="beige_mobile" />
+                <label for="beige_mobile" class="check_beige"></label>
+              </div>
+              <div class="check">
+                <input type="checkbox" name="brown" id="brown_mobile" />
+                <label for="brown_mobile" class="check_brown"></label>
+              </div>
+              <div class="check">
+                <input type="checkbox" name="burgundy" id="burgundy_mobile" />
+                <label for="burgundy_mobile" class="check_burgundy"></label>
+              </div>
+              <div class="check">
+                <input type="checkbox" name="purple" id="purple_mobile" />
+                <label for="purple_mobile" class="check_purple"></label>
+              </div>
+              <div class="check">
+                <input type="checkbox" name="pink" id="pink_mobile" />
+                <label for="pink_mobile" class="check_pink"></label>
+              </div>
+            </div>
+            <!-- div #color end -->
+
+            <label class="heading_label" for="material">Material</label>
+            <div class="material_wrapper">
+              <select multiple name="material" id="material">
+                <option value="polyurethane">Polyurethane</option>
+                <option value="nylon">Nylon</option>
+                <option value="polyester">Polyester</option>
+                <option value="suede-calf-leather">Suede - Calf Leather</option>
+                <option value="calf-leather">Calf Leather</option>
+              </select>
+              <select multiple name="material_" id="material_">
+                <option value="rpet">rPET</option>
+                <option value="patent-pvc">Patent PVC</option>
+                <option value="polyethylene">Polyethylene</option>
+                <option value="lacquer">Lacquer</option>
+                <option value="metal">Metal</option>
+              </select>
+            </div>
+            <input type="submit" value="Apply filter" class="filter_submit" />
+          </form>
+        </div>
+
+        <!-- filter_mobile end -->
+      </aside>
+      <section class="products">
+        <div class="products_content">
+          <a href="#" class="products_link">
+            <article class="products_item">
+              <img
+                src="assets/images/hardcoded/bag1.jpg"
+                alt="alexandra"
+                class="products_thumbnail"
+              />
+              <div class="item_icons">
+                <div class="item_icons_sale">-<span>20</span>%</div>
+                <div class="item_icons_recycled">
+                  <img
+                    src="assets/images/icons/recycled.svg"
+                    alt="recycled"
+                    class="recycled"
+                  />
+                </div>
+              </div>
+              <h3 class="products_title">Alexandra</h3>
+              <p class="products_price">
+                <span class="sale_price"
+                  ><span class="sale_price_number">150</span> DKK</span
+                >&nbsp;<span class="regular_price"
+                  ><span class="regular_price_number">300</span> DKK</span
+                >
+              </p>
+              <div class="products_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+          <a href="#" class="products_link">
+            <article class="products_item">
+              <img
+                src="assets/images/hardcoded/bag2.jpg"
+                alt="alexandra"
+                class="products_thumbnail"
+              />
+              <div class="item_icons">
+                <div class="item_icons_sale">-<span>20</span>%</div>
+                <div class="item_icons_recycled">
+                  <img
+                    src="assets/images/icons/recycled.svg"
+                    alt="recycled"
+                    class="recycled"
+                  />
+                </div>
+              </div>
+              <h3 class="products_title">Alexandra</h3>
+              <p class="products_price">
+                <span class="sale_price"
+                  ><span class="sale_price_number">150</span> DKK</span
+                >&nbsp;<span class="regular_price"
+                  ><span class="regular_price_number"> 300</span> DKK</span
+                >
+              </p>
+              <div class="products_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+          <a href="#" class="products_link">
+            <article class="products_item">
+              <img
+                src="assets/images/hardcoded/bag3.jpg"
+                alt="alexandra"
+                class="products_thumbnail"
+              />
+              <div class="item_icons">
+                <div class="item_icons_sale">-<span>20</span>%</div>
+                <div class="item_icons_recycled">
+                  <img
+                    src="assets/images/icons/recycled.svg"
+                    alt="recycled"
+                    class="recycled"
+                  />
+                </div>
+              </div>
+              <h3 class="products_title">Alexandra</h3>
+              <p class="products_price">
+                <span class="sale_price"
+                  ><span class="sale_price_number">150</span> DKK</span
+                >&nbsp;<span class="regular_price"
+                  ><span class="regular_price_number"> 300</span> DKK</span
+                >
+              </p>
+              <div class="products_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+          <a href="#" class="products_link">
+            <article class="products_item">
+              <img
+                src="assets/images/hardcoded/bag4.jpg"
+                alt="alexandra"
+                class="products_thumbnail"
+              />
+              <h3 class="products_title">Alexandra</h3>
+              <p class="products_price">
+                <span class="sale_price"
+                  ><span class="sale_price_number">150</span> DKK</span
+                ><span class="regular_price"
+                  >&nbsp;<span class="regular_price_number"> 300</span>
+                  DKK</span
+                >
+              </p>
+              <div class="products_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+          <a href="#" class="products_link">
+            <article class="products_item">
+              <img
+                src="assets/images/hardcoded/bag1.jpg"
+                alt="alexandra"
+                class="products_thumbnail"
+              />
+              <h3 class="products_title">Alexandra</h3>
+              <p class="products_price">
+                <span class="sale_price"
+                  ><span class="sale_price_number">150</span> DKK</span
+                ><span class="regular_price"
+                  >&nbsp;<span class="regular_price_number"> 300</span>
+                  DKK</span
+                >
+              </p>
+              <div class="products_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+          <a href="#" class="products_link">
+            <article class="products_item">
+              <img
+                src="assets/images/hardcoded/bag2.jpg"
+                alt="alexandra"
+                class="products_thumbnail"
+              />
+              <h3 class="products_title">Alexandra</h3>
+              <p class="products_price">
+                <span class="sale_price"
+                  ><span class="sale_price_number">150</span> DKK</span
+                ><span class="regular_price"
+                  >&nbsp;<span class="regular_price_number"> 300</span>
+                  DKK</span
+                >
+              </p>
+              <div class="products_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+          <a href="#" class="products_link">
+            <article class="products_item">
+              <img
+                src="assets/images/hardcoded/bag3.jpg"
+                alt="alexandra"
+                class="products_thumbnail"
+              />
+              <h3 class="products_title">Alexandra</h3>
+              <p class="products_price">
+                <span class="sale_price"
+                  ><span class="sale_price_number">150</span> DKK</span
+                >&nbsp;<span class="regular_price"
+                  ><span class="regular_price_number"> 300</span> DKK</span
+                >
+              </p>
+              <div class="products_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+          <a href="#" class="products_link">
+            <article class="products_item">
+              <img
+                src="assets/images/hardcoded/bag4.jpg"
+                alt="alexandra"
+                class="products_thumbnail"
+              />
+              <h3 class="products_title">Alexandra</h3>
+              <p class="products_price">
+                <span class="sale_price"
+                  ><span class="sale_price_number">150</span> DKK</span
+                >&nbsp;<span class="regular_price"
+                  ><span class="regular_price_number"> 300</span> DKK</span
+                >
+              </p>
+              <div class="products_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+          <a href="#" class="products_link">
+            <article class="products_item">
+              <img
+                src="assets/images/hardcoded/bag1.jpg"
+                alt="alexandra"
+                class="products_thumbnail"
+              />
+              <h3 class="products_title">Alexandra</h3>
+              <p class="products_price">
+                <span class="sale_price"
+                  ><span class="sale_price_number">150</span> DKK</span
+                >&nbsp;<span class="regular_price"
+                  ><span class="regular_price_number"> 300</span> DKK</span
+                >
+              </p>
+              <div class="products_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+          <a href="#" class="products_link">
+            <article class="products_item">
+              <img
+                src="assets/images/hardcoded/bag2.jpg"
+                alt="alexandra"
+                class="products_thumbnail"
+              />
+              <h3 class="products_title">Alexandra</h3>
+              <p class="products_price">
+                <span class="sale_price"
+                  ><span class="sale_price_number">150</span> DKK</span
+                >&nbsp;<span class="regular_price"
+                  ><span class="regular_price_number"> 300</span> DKK</span
+                >
+              </p>
+              <div class="products_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+          <a href="#" class="products_link">
+            <article class="products_item">
+              <img
+                src="assets/images/hardcoded/bag3.jpg"
+                alt="alexandra"
+                class="products_thumbnail"
+              />
+              <h3 class="products_title">Alexandra</h3>
+              <p class="products_price">
+                <span class="sale_price"
+                  ><span class="sale_price_number">150</span> DKK</span
+                >&nbsp;<span class="regular_price"
+                  ><span class="regular_price_number"> 300</span> DKK</span
+                >
+              </p>
+              <div class="products_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+          <a href="#" class="products_link">
+            <article class="products_item">
+              <img
+                src="assets/images/hardcoded/bag4.jpg"
+                alt="alexandra"
+                class="products_thumbnail"
+              />
+              <h3 class="products_title">Alexandra</h3>
+              <p class="products_price">
+                <span class="sale_price"
+                  ><span class="sale_price_number">150</span> DKK</span
+                >&nbsp;<span class="regular_price"
+                  ><span class="regular_price_number"> 300</span> DKK</span
+                >
+              </p>
+              <div class="products_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+        </div>
+        <footer class="products_footer">
+          <span class="page_active">1</span>
+          <span>2</span>
+          <span>...</span>
+          <span>
+            <img
+              src="assets/images/icons/arrow_right.svg"
+              alt="arrow right"
+              class="icon_pagination"
+            />
+          </span>
+        </footer>
+      </section>
+    </main>
+    <footer></footer>
     <script src="js/main.js"></script>
+    <script src="js/new_arrivals.js"></script>
   </body>
 </html>
