@@ -28,6 +28,9 @@ main > section.products {
   grid-row: 2 / span 1;
 }
 
+.hidden {
+  display: none;
+}
 aside.filter {
   font-size: calc(0.5rem + 0.8vw);
 }
@@ -48,7 +51,7 @@ select {
   /* border-bottom: 1px solid var(--font-color); */
   font-family: var(--body-text);
   width: calc(100% - 2rem);
-  font-size: 1.2rem;
+  font-size: calc(0.5rem + 0.8vw);
   margin-top: 1rem;
   padding: 0;
   background-color: #f8f8f8;
@@ -69,11 +72,11 @@ aside.filter > form div#color.select_hidden {
   display: none;
 }
 
-aside.filter > form input[type="checkbox"] {
+aside.filter form input[type="checkbox"] {
   visibility: hidden;
 }
 
-aside.filter > form div.check {
+aside.filter form div.check {
   width: 3rem;
   height: 3rem;
   cursor: pointer;
@@ -83,15 +86,20 @@ aside.filter > form div.check {
   /* box-shadow: 0.5px 0.5px 5px 0px rgba(51, 51, 51, 0.54); */
 }
 
+aside.filter > form input[type="range"] {
+  cursor: pointer;
+}
+
 aside.filter > form div.check > input,
 aside.filter > form div.check > label {
   position: absolute;
   top: 0;
   left: 0;
   margin: 0;
+  cursor: pointer;
 }
 
-aside.filter > form label.check_red {
+aside.filter form label.check_red {
   background-color: red;
   width: 100%;
   margin: 0;
@@ -99,7 +107,7 @@ aside.filter > form label.check_red {
   height: 3rem;
 }
 
-aside.filter > form label.check_blue {
+aside.filter form label.check_blue {
   background-color: blue;
   width: 100%;
   margin: 0;
@@ -107,7 +115,7 @@ aside.filter > form label.check_blue {
   height: 3rem;
 }
 
-aside.filter > form label.check_black {
+aside.filter form label.check_black {
   background-color: black;
   width: 100%;
   margin: 0;
@@ -115,7 +123,7 @@ aside.filter > form label.check_black {
   height: 3rem;
 }
 
-aside.filter > form label.check_yellow {
+aside.filter form label.check_yellow {
   background-color: yellow;
   width: 100%;
   margin: 0;
@@ -123,7 +131,7 @@ aside.filter > form label.check_yellow {
   height: 3rem;
 }
 
-aside.filter > form label.check_green {
+aside.filter form label.check_green {
   background-color: green;
   width: 100%;
   margin: 0;
@@ -131,7 +139,7 @@ aside.filter > form label.check_green {
   height: 3rem;
 }
 
-aside.filter > form label.check_gray {
+aside.filter form label.check_gray {
   background-color: gray;
   width: 100%;
   margin: 0;
@@ -139,7 +147,7 @@ aside.filter > form label.check_gray {
   height: 3rem;
 }
 
-aside.filter > form label.check_white {
+aside.filter form label.check_white {
   background-color: white;
   width: 100%;
   margin: 0;
@@ -147,7 +155,7 @@ aside.filter > form label.check_white {
   height: 3rem;
 }
 
-aside.filter > form label.check_beige {
+aside.filter form label.check_beige {
   background-color: #e1c699;
   width: 100%;
   margin: 0;
@@ -155,7 +163,7 @@ aside.filter > form label.check_beige {
   height: 3rem;
 }
 
-aside.filter > form label.check_brown {
+aside.filter form label.check_brown {
   background-color: #964b00;
   width: 100%;
   margin: 0;
@@ -163,7 +171,7 @@ aside.filter > form label.check_brown {
   height: 3rem;
 }
 
-aside.filter > form label.check_burgundy {
+aside.filter form label.check_burgundy {
   background-color: #800020;
   width: 100%;
   margin: 0;
@@ -171,7 +179,7 @@ aside.filter > form label.check_burgundy {
   height: 3rem;
 }
 
-aside.filter > form label.check_purple {
+aside.filter form label.check_purple {
   background-color: purple;
   width: 100%;
   margin: 0;
@@ -179,7 +187,7 @@ aside.filter > form label.check_purple {
   height: 3rem;
 }
 
-aside.filter > form label.check_pink {
+aside.filter form label.check_pink {
   background-color: pink;
   width: 100%;
   margin: 0;
@@ -187,7 +195,7 @@ aside.filter > form label.check_pink {
   height: 3rem;
 }
 
-aside.filter > form input[type="checkbox"]:checked + label {
+aside.filter form input[type="checkbox"]:checked + label {
   border: 3px solid #e6e6e6;
 }
 
@@ -213,16 +221,16 @@ select#collection.select_hidden {
 }
 
 .select_divider {
-  margin: 1rem 0 2rem 0;
+  margin: 0.5rem 0 0.5rem 0;
   width: 95%;
-  height: 2px;
+  height: 1px;
   background-color: var(--font-color);
 }
 
 label {
   width: 100%;
   font-weight: 500;
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: inline-block;
 }
 
@@ -235,19 +243,23 @@ label {
 .chevron {
   background-image: url("../assets/images/icons/chevron-down.svg");
   background-size: 100%;
-  width: 22px;
-  height: 12px;
+  width: 15px;
+  height: 10px;
   background-repeat: no-repeat;
   cursor: pointer;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .chevron.open {
   background-image: url("../assets/images/icons/chevron-up.svg");
   background-size: 100%;
-  width: 22px;
-  height: 12px;
+  width: 15px;
+  height: 10px;
   background-repeat: no-repeat;
   cursor: pointer;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 input[type="submit"] {
@@ -271,11 +283,6 @@ section.products > .products_content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
-
-/* section.products > .products_content {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 0.5fr));
-} */
 
 a.products_link {
   text-decoration: none;
@@ -365,7 +372,7 @@ div.item_icons {
 }
 div.item_icons_sale {
   background-color: #da4e4e;
-  color:white;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -378,11 +385,14 @@ img.recycled {
   object-fit: cover;
 }
 
-
+.filter_heading_mobile,
+.filter_mobile {
+  display: none;
+}
 
 /* slider styling */
 aside.filter .price_label {
-  font-size: calc(0.5rem + 0.8vw);
+  font-size: calc(0.6rem + 0.8vw);
   margin-bottom: calc(0.5rem + 0.5vw);
   margin-top: 0;
 }
@@ -409,7 +419,7 @@ aside.filter .price_label {
   top: 0;
   bottom: 0;
   border-radius: 5px;
-  background-color: #AED5B2;
+  background-color: #aed5b2;
 }
 .slider > .range {
   position: absolute;
@@ -426,7 +436,6 @@ aside.filter .price_label {
   z-index: 3;
   width: 30px;
   height: 30px;
-  /* cursor: pointer; */
   background-color: #3d7642;
   border-radius: 50%;
   box-shadow: 0 0 0 0 rgba(174, 213, 178, 0.2);
@@ -469,7 +478,7 @@ input[type="range"]::-webkit-slider-thumb {
 label.label-left {
   position: absolute;
   width: auto;
-  top: calc(-0.8rem - 0.6vw);
+  top: calc(-0.5rem - 0.2vw);
   left: 0;
   font-size: calc(0.5rem + 0.5vw);
 }
@@ -478,10 +487,195 @@ label.label-right {
   position: absolute;
   width: auto;
   margin-right: 0.8rem;
-  top: calc(-0.8rem - 0.6vw);
+  top: calc(-0.5rem - 0.2vw);
   right: 0;
   bottom: 0;
   font-size: calc(0.5rem + 0.5vw);
 }
 /* slider styling end*/
- 
+
+/* pagination */
+footer.products_footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(0.5rem + 0.5vw);
+}
+
+footer.products_footer > * {
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.page_active {
+  font-weight: 700;
+}
+
+img.icon_pagination {
+  width: 1rem;
+  height: 1rem;
+}
+/* pagination end */
+
+/* devices smaller 800px */
+@media only screen and (max-width: 800px) {
+  body {
+    padding: 0;
+  }
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: calc(100px + 5vw) 100px 1fr;
+  }
+
+  main > h1 {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+  }
+
+  main > aside.filter {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    margin: 0;
+  }
+
+  main > section.products {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+  }
+
+  form#filter_form {
+    display: none;
+  }
+
+  footer.products_footer {
+    display: none;
+  }
+
+  .filter_heading_mobile {
+    display: flex;
+  }
+
+  .filter_heading_mobile img {
+    margin: 0 1rem;
+  }
+
+  section.products > .products_content {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .filter_mobile {
+    display: block;
+  }
+
+  .filter_mobile.closed {
+    display: none;
+  }
+
+  .filter_mobile.opened {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f8f8f8;
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    z-index: 5;
+  }
+
+  #color_mobile {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    padding: 0 2rem;
+  }
+
+  select {
+    font-size: calc(0.7rem + 1vw);
+  }
+
+  label.heading_label {
+    font-size: calc(0.9rem + 1vw);
+    padding: 0 1rem;
+  }
+
+  div.material_wrapper {
+    display: flex;
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+  }
+
+  select#material {
+    height: calc(1.9rem * 5);
+  }
+
+  aside.filter form div.check {
+    margin-top: 0;
+  }
+
+  .filter_close_btn {
+    font-size: calc(1.5rem + 1.5vw);
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    cursor: pointer;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    background-color: var(--blue);
+    color: white;
+    padding: 0;
+    margin: 0;
+    margin-top: 1.5rem;
+    border: none;
+  }
+
+  .price_wrapper {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin-bottom: 1rem;
+  }
+
+  .price_wrapper > label.heading_label {
+    width: auto;
+  }
+
+  .price_wrapper > input[type="text"] {
+    height: 1.5rem;
+    width: 6rem;
+    margin: 0 1rem;
+    border: 1px solid #d3d3d3;
+    border-radius: 2px;
+    text-align: center;
+    color: #d3d3d3;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  input[type="submit"] {
+    width: 100%;
+    background-color: var(--blue);
+    color: white;
+    padding: 0;
+    margin: 0;
+    margin-top: 1rem;
+    border: none;
+  }
+
+  select#material {
+    height: calc(1.1rem * 5);
+  }
+
+  div#color_mobile {
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .price_wrapper > input[type="text"] {
+    width: 4rem;
+  }
+}
