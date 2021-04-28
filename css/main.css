@@ -5,9 +5,172 @@
   --headings-text: "Roboto", sans-serif;
   --blue: #7bafd4;
   --dark-blue: #175a8a;
+  --green: #eff6ef;
   --font-color: #656b65;
+  --bg-color: #f8f8f8;
 }
 
 body {
-  background-color: #f8f8f8;
+  background-color: var(--bg-color);
+  font-family: var(--body-text);
+  margin: 0;
+}
+
+.active {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+header {
+  background-color: var(--bg-color);
+  position: fixed;
+  width: 100%;
+}
+
+header ul {
+  list-style: none;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.menu_first_line {
+  display: flex;
+  text-align: center;
+  gap: 1.5rem;
+  margin: 0.9rem 1.3rem;
+}
+
+header img {
+  height: 24px;
+}
+
+.logo_width {
+  width: 100%;
+}
+
+.logo img {
+  height: 27px;
+}
+
+.menu_second_line {
+  background-color: var(--green);
+}
+
+.menu_second_line > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 10rem;
+  padding: 0.5rem;
+}
+
+.menu_dropdown ul {
+  position: absolute;
+  font-size: 0.9rem;
+  background-color: var(--green);
+  width: 180px;
+  padding: 0;
+  margin-left: -1.2rem;
+}
+
+.menu_dropdown li {
+  margin: 1.2rem;
+}
+
+.search_box {
+  position: absolute;
+  height: 15px;
+  border-bottom: 2px solid #8e8e8e;
+  padding: 0.7rem;
+  margin-top: -0.6rem;
+}
+
+.search_text {
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 1rem;
+  color: var(--font-color);
+  float: left;
+  width: 210px;
+}
+
+.hidden,
+#hamburger_id,
+.menu_mobile_arrows {
+  display: none;
+}
+
+@media screen and (min-width: 900px) {
+  .menu_dropdown:hover ul {
+    display: block;
+  }
+
+  #search_icon_id:hover + .search_box {
+    display: inline;
+  }
+
+  .search_box:hover {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .menu_second_line > ul {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .menu_second_line,
+  .danish_flag {
+    display: none;
+  }
+
+  #hamburger_id {
+    display: block;
+  }
+
+  .menu_second_line.responsive {
+    display: block;
+    overflow: scroll;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .menu_second_line.responsive ul {
+    flex-direction: column;
+  }
+
+  .menu_second_line.responsive li {
+    margin: 2rem;
+  }
+
+  .menu_mobile_arrows {
+    display: inline;
+    float: right;
+  }
+
+  .menu_mobile_arrows img {
+    height: 10px;
+  }
+
+  .menu_dropdown ul {
+    position: relative;
+    margin: 3.5rem 1rem -2rem 1rem;
+  }
+
+  #cross_id {
+    margin: 1.1rem 1.3rem;
+  }
+
+  #mobile_flag_id {
+    display: block;
+    float: right;
+    margin: 1.1rem 1.3rem;
+    height: 28px;
+  }
 }
