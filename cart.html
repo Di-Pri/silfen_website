@@ -6,9 +6,207 @@
     <meta name="robots" content="noindex, nofollow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/cart.css" />
     <title>My cart</title>
   </head>
   <body>
+    <header>
+      <nav class="menu_first_line" id="menu_first_line_id">
+        <img
+          id="hamburger_id"
+          src="assets/images/icons/hamburger.svg"
+          alt="Menu"
+        />
+        <a class="danish_flag" href="#"
+          ><img src="assets/images/icons/danishflag.svg" alt="DA"
+        /></a>
+        <div class="search">
+          <img
+            id="search_icon_id"
+            src="assets/images/icons/search.svg"
+            alt="Search"
+          />
+          <div class="search_box hidden">
+            <input
+              class="search_text"
+              type="text"
+              name="search_item"
+              placeholder="Type to search"
+            />
+          </div>
+        </div>
+        <div class="logo_width">
+          <a class="logo" href="index.html"
+            ><img src="assets/images/icons/logo.svg" alt="Silfen"
+          /></a>
+        </div>
+        <a class="heart" href="#"
+          ><img src="assets/images/icons/heart.svg" alt="Liked"
+        /></a>
+        <a class="shopping_bag" href="#"
+          ><img src="assets/images/icons/shopping_bag.svg" alt="Cart"
+        /></a>
+      </nav>
+      <nav class="menu_second_line" id="menu_second_line_id">
+        <img
+          class="hidden"
+          id="cross_id"
+          src="assets/images/icons/cross.svg"
+          alt="Menu"
+        />
+        <img
+          class="hidden"
+          id="mobile_flag_id"
+          src="assets/images/icons/danishflag.svg"
+          alt="DA"
+        />
+        <ul>
+          <li><a href="new_arrivals.html">New arrivals</a></li>
+          <li class="menu_dropdown">
+            <a href="#">All bags</a>
+            <div class="menu_mobile_arrows">
+              <img
+                id="menu_chevron_down1"
+                src="assets/images/icons/chevron-down.svg"
+                alt="down"
+              />
+              <img
+                class="hidden"
+                id="menu_chevron_up1"
+                src="assets/images/icons/chevron-up.svg"
+                alt="up"
+              />
+            </div>
+            <ul class="hidden" id="dropdown_content1">
+              <li><a href="#">Bumbags</a></li>
+              <li><a href="#">Shoulder bags</a></li>
+              <li><a href="#">Crossbody bags</a></li>
+              <li><a href="#">Wallets</a></li>
+              <li><a href="#">Tote bags</a></li>
+              <li><a href="#">Mini bags</a></li>
+              <li><a href="#">Care products</a></li>
+            </ul>
+          </li>
+          <li class="menu_dropdown">
+            <a href="collections.html">Collections</a>
+            <div class="menu_mobile_arrows">
+              <img
+                id="menu_chevron_down2"
+                src="assets/images/icons/chevron-down.svg"
+                alt="down"
+              />
+              <img
+                class="hidden"
+                id="menu_chevron_up2"
+                src="assets/images/icons/chevron-up.svg"
+                alt="up"
+              />
+            </div>
+            <ul class="hidden" id="dropdown_content2">
+              <li><a href="#">Snow queen</a></li>
+              <li><a href="#">Classic</a></li>
+              <li><a href="#">Recycled</a></li>
+            </ul>
+          </li>
+          <li><a href="sale.html">Sale</a></li>
+          <li><a href="sustainability.html">Sustainability</a></li>
+          <li><a href="about_us.html">About us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="cart_heading">
+        <h1>My cart</h1>
+      </section>
+      <section class="cart_contents">
+        <div class="content_heading">
+          <div class="heading_product">Product</div>
+          <div class="heading_price">Price</div>
+          <div class="heading_quantity">Quantity</div>
+          <div class="heading_subtotal">Subtotal</div>
+          <div class="heading_delete">&times;</div>
+        </div>
+        <div class="content_items">
+          <div class="content_item">
+            <div class="item_main">
+              <img src="assets/images/hardcoded/bag1.jpg" alt="alexandra" />
+              <p>Alexandra</p>
+            </div>
+            <div class="item_price">
+              <div class="item_price_string"><span>299</span> DKK</div>
+            </div>
+            <div class="item_quantity">1</div>
+            <div class="item_subtotal">
+              <div class="item_subtotal_string">
+                <span>299</span> DKK<span> (incl. vat)</span>
+              </div>
+            </div>
+            <div class="item_delete">&times;</div>
+          </div>
+          <div class="content_item">
+            <div class="item_main">
+              <img src="assets/images/hardcoded/bag2.jpg" alt="siri" />
+              <p>Siri</p>
+            </div>
+            <div class="item_price">
+              <div class="item_price_string"><span>499</span> DKK</div>
+            </div>
+            <div class="item_quantity">1</div>
+            <div class="item_subtotal">
+              <div class="item_subtotal_string">
+                <span>499</span> DKK <span> (incl. vat)</span>
+              </div>
+            </div>
+            <div class="item_delete">&times;</div>
+          </div>
+        </div>
+        <!-- div content_items end -->
+        <div class="content_total">
+          <div class="total_total">Total</div>
+          <div class="total_empty"></div>
+          <div class="total_empty"></div>
+
+          <div class="total_sum">
+            <div class="total_sum_string">
+              <span>798</span> DKK <span> (incl. vat)</span>
+            </div>
+          </div>
+          <div class="total_empty"></div>
+        </div>
+      </section>
+      <section class="cart_addons">
+        <h2>You might also like</h2>
+        <div class="addon_items">
+          <article>
+            <img src="assets/images/hardcoded/care1.jpg" alt="care balsam" />
+            <div class="addon_item_hover">
+              <span>Add to cart</span>
+            </div>
+          </article>
+          <article>
+            <img src="assets/images/hardcoded/care2.jpg" alt="care spray" />
+            <div class="addon_item_hover">
+              <span>Add to cart</span>
+            </div>
+          </article>
+          <article>
+            <img src="assets/images/photos/gift.jpg" alt="gift box" />
+            <div class="addon_item_hover">
+              <span>Add to cart</span>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="cart_coupon">
+        <input type="text" placeholder="Coupon code" />
+        <input type="submit" value="Apply coupon" />
+      </section>
+      <section class="cart_checkout">
+        <a href="#" class="go_back">Go back</a>
+        <a href="checkout.html" class="checkout">Proceed to checkout</a>
+      </section>
+    </main>
     <script src="js/main.js"></script>
   </body>
 </html>
