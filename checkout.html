@@ -120,48 +120,50 @@
       </section>
       <section class="checkout_content">
         <form action="#" id="checkout_form">
-          <fieldset>
-            <legend>Personal information</legend>
-            <label class="first_name_label"
-              >First name *
+          <fieldset class="personal_info">
+            <legend>Personal &nbsp; information</legend>
+            <div class="first_name_wrapper">
+              <label class="first_name_label">First name *</label>
               <input type="text" name="first_name" id="first_name" required />
-            </label>
-            <label class="last_name_label"
-              >Last name *
+            </div>
+            <div class="last_name_wrapper">
+              <label class="last_name_label">Last name * </label>
               <input type="text" name="last_name" id="last_name" required />
-            </label>
+            </div>
           </fieldset>
           <!-- fieldset contact_info start -->
           <fieldset class="contact_info">
-            <legend>Contact information</legend>
-            <label for="country" class="country_label"> Country * </label>
-            <select name="country" id="country" required>
-              <option value="denmark">Denmark</option>
-              <option value="sweden">Sweden</option>
-              <option value="norway">Norway</option>
-              <option value="uk">UK</option>
-              <option value="germany">Germany</option>
-              <option value="greece">Greece</option>
-              <option value="netherlands">The Netherlands</option>
-            </select>
-            <label for="street" class="street_label"
-              >Street name *
+            <legend>Contact &nbsp; information</legend>
+            <div class="country_wrapper">
+              <label for="country" class="country_label"> Country * </label>
+              <select name="country" id="country" required>
+                <option value="denmark">Denmark</option>
+                <option value="sweden">Sweden</option>
+                <option value="norway">Norway</option>
+                <option value="uk">UK</option>
+                <option value="germany">Germany</option>
+                <option value="greece">Greece</option>
+                <option value="netherlands">The Netherlands</option>
+              </select>
+            </div>
+            <div class="street_wrapper">
+              <label for="street" class="street_label">Street name * </label>
               <input type="text" name="street" id="street" required />
-            </label>
-            <label for="house" class="house_label"
-              >House *
+            </div>
+            <div class="house_wrapper">
+              <label for="house" class="house_label">House * </label>
               <input type="text" name="house" id="house" required />
-            </label>
-            <label for="city" class="city_label"
-              >City / Town *
+            </div>
+            <div class="city_wrapper">
+              <label for="city" class="city_label">City / Town * </label>
               <input type="text" name="city" id="city" required />
-            </label>
-            <label for="postcode" class="postcode_label"
-              >Postcode *
+            </div>
+            <div class="postcode_wrapper">
+              <label for="postcode" class="postcode_label">Postcode * </label>
               <input type="text" name="postcode" id="postcode" required />
-            </label>
-            <label for="phone" class="phone_label"
-              >Phone number *
+            </div>
+            <div class="phone_wrapper">
+              <label for="phone" class="phone_label">Phone number * </label>
               <input
                 type="text"
                 name="phone"
@@ -169,9 +171,9 @@
                 placeholder="50 30 30 30"
                 required
               />
-            </label>
-            <label for="email" class="email_label"
-              >Email address *
+            </div>
+            <div class="email_wrapper">
+              <label for="email" class="email_label">Email address * </label>
               <input
                 type="email"
                 name="email"
@@ -179,91 +181,108 @@
                 required
                 placeholder="Example@gmail.com"
               />
-            </label>
+            </div>
           </fieldset>
           <!-- fieldset contact_info end -->
           <fieldset>
-            <label
-              for="different_address"
-              class="different_address_label"
-            ></label>
             <input
               type="checkbox"
               name="different_address"
               id="different_address"
             />
+            <label for="different_address" class="different_address_label"
+              >Ship to a different address
+            </label>
           </fieldset>
           <!-- fieldset shipping_info start -->
           <fieldset class="shipping_info">
-            <legend>Shipping information</legend>
-            <label for="country" class="country_label"> Country * </label>
-            <select name="country" id="country" required>
-              <option value="denmark">Denmark</option>
-              <option value="sweden">Sweden</option>
-              <option value="norway">Norway</option>
-              <option value="uk">UK</option>
-              <option value="germany">Germany</option>
-              <option value="greece">Greece</option>
-              <option value="netherlands">The Netherlands</option>
-            </select>
-            <label for="street" class="street_label"
-              >Street name *
-              <input type="text" name="street" id="street" required />
-            </label>
-            <label for="house" class="house_label"
-              >House *
-              <input type="text" name="house" id="house" required />
-            </label>
-            <label for="city" class="city_label"
-              >City / Town *
-              <input type="text" name="city" id="city" required />
-            </label>
-            <label for="postcode" class="postcode_label"
-              >Postcode *
-              <input type="text" name="postcode" id="postcode" required />
-            </label>
-            <label for="phone" class="phone_label"
-              >Phone number *
+            <legend>Shipping &nbsp; information</legend>
+            <div class="country_wrapper">
+              <label for="country_ship" class="country_label">
+                Country *
+              </label>
+              <select name="country_ship" id="country_ship" required>
+                <option value="denmark">Denmark</option>
+                <option value="sweden">Sweden</option>
+                <option value="norway">Norway</option>
+                <option value="uk">UK</option>
+                <option value="germany">Germany</option>
+                <option value="greece">Greece</option>
+                <option value="netherlands">The Netherlands</option>
+              </select>
+            </div>
+            <div class="street_wrapper">
+              <label for="street_ship" class="street_label"
+                >Street name *
+              </label>
+              <input type="text" name="street_ship" id="street_ship" required />
+            </div>
+            <div class="house_wrapper">
+              <label for="house_ship" class="house_label">House * </label>
+              <input type="text" name="house_ship" id="house_ship" required />
+            </div>
+            <div class="city_wrapper">
+              <label for="city_ship" class="city_label">City / Town * </label>
+              <input type="text" name="city_ship" id="city_ship" required />
+            </div>
+            <div class="postcode_wrapper">
+              <label for="postcode_ship" class="postcode_label"
+                >Postcode *
+              </label>
               <input
                 type="text"
-                name="phone"
-                id="phone"
+                name="postcode_ship"
+                id="postcode_ship"
+                required
+              />
+            </div>
+            <div class="phone_wrapper">
+              <label for="phone_ship" class="phone_label"
+                >Phone number *
+              </label>
+              <input
+                type="text"
+                name="phone_ship"
+                id="phone_ship"
                 placeholder="50 30 30 30"
                 required
               />
-            </label>
-            <label for="email" class="email_label"
-              >Email address *
+            </div>
+            <div class="email_wrapper">
+              <label for="email_ship" class="email_label"
+                >Email address *
+              </label>
               <input
                 type="email"
-                name="email"
-                id="email"
+                name="email_ship"
+                id="email_ship"
                 required
                 placeholder="Example@gmail.com"
               />
-            </label>
+            </div>
           </fieldset>
           <!-- fieldset shipping_info end -->
-          <fieldset class="buttons">
-            <a href="new_arrivals.html" class="go_back">Continue shopping</a>
-            <input type="submit" value="Place order" />
-          </fieldset>
         </form>
       </section>
       <!-- section checkout_content end -->
+      <article class="order_summary">
+        <div class="summary_heading">Order summary</div>
+        <div class="summary_items">
+          <div class="summary_item"></div>
+        </div>
+        <div class="fee">
+          Shipping fee: <span><span class="fee_number">25</span> DKK</span>
+        </div>
+        <div class="total">
+          Order total: <span><span class="total_number">823</span> DKK</span>
+        </div>
+      </article>
+      <section class="buttons">
+        <a href="new_arrivals.html" class="go_back">Continue shopping</a>
+        <input type="submit" form="checkout_form" value="Place order" />
+      </section>
     </main>
-    <aside class="order_summary">
-      <div class="summary_heading">Order summary</div>
-      <div class="summary_items">
-        <div class="summary_item"></div>
-      </div>
-      <div class="fee">
-        Shipping fee: <span><span class="fee_number">25</span> DKK</span>
-      </div>
-      <div class="total">
-        Order total: <span><span class="total_number">823</span> DKK</span>
-      </div>
-    </aside>
+
     <script src="js/main.js"></script>
     <script src="js/checkout.js"></script>
   </body>

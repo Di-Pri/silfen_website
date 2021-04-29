@@ -1,12 +1,151 @@
 body {
   font-family: var(--body-text);
   color: var(--font-color);
-  font-size: 1rem;
-  /* padding: 1rem; */
+  font-size: 1.5rem;
+  /* display: grid;
+  grid-template-areas:
+    "h h"
+    "m a";
+  grid-template-columns: 0.6fr 0.5fr;
+  grid-template-rows: min-content min-content 1fr;
+  gap: 2rem; */
+  /* add one more row for footer */
 }
 
 header {
   font-size: 1rem;
   z-index: 10;
   top: 0;
+}
+
+main {
+  margin-top: 8rem;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.checkout_heading {
+  grid-column: 1 / span 2;
+}
+
+.checkout_content {
+  grid-column: 1 / span 1;
+}
+
+.order_summary {
+  grid-column: 2 / span 1;
+}
+
+.buttons {
+  grid-column: 1 / span 2;
+}
+
+h1 {
+  font-size: 2rem;
+  padding-left: 1.5rem;
+  text-transform: uppercase;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+label:not(label.different_address_label) {
+  display: block;
+}
+
+input:not(input#different_address) {
+  height: 2rem;
+  width: 100%;
+  border: 0.5px solid #656b65;
+  border-radius: 2px;
+}
+
+fieldset {
+  margin-top: 4rem;
+}
+
+/* personal information fieldset */
+.personal_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.personal_info > legend {
+  margin-top: -2rem;
+  grid-column: 1 / span 2;
+}
+
+.first_name_wrapper {
+  grid-column: 1 / span 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.last_name_wrapper {
+  grid-column: 2 / span 1;
+  display: flex;
+  flex-direction: column;
+}
+/* personal information fieldset end */
+
+/* contact and shipping information fieldsets */
+.contact_info,
+.shipping_info {
+  display: grid;
+  grid-template-columns: 0.7fr 0.3fr;
+  gap: 1rem;
+}
+
+.contact_info > legend,
+.shipping_info > legend {
+  margin-top: -2rem;
+  grid-column: 1 / span 2;
+}
+
+.country_wrapper,
+.phone_wrapper,
+.email_wrapper {
+  grid-column: 1 / span 2;
+}
+
+.country_wrapper select {
+  width: 100%;
+}
+
+select {
+  height: 2.5rem;
+  font-size: 1.2rem;
+  font-family: var(--body-text);
+  border: 0.5px solid #656b65;
+  border-radius: 2px;
+}
+
+.phone_wrapper input::placeholder,
+.email_wrapper input::placeholder {
+  height: 2.5rem;
+  font-size: 1.2rem;
+  font-family: var(--body-text);
+  color: #d3d3d3;
+}
+
+#different_address {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-top: 5px;
+}
+/* contact and shipping information fieldsets end */
+
+/* buttons section */
+.buttons {
+  padding: 1rem;
+}
+a.go_back {
+  text-decoration: none;
 }
