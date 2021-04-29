@@ -125,8 +125,9 @@
           <div class="heading_price">Price</div>
           <div class="heading_quantity">Quantity</div>
           <div class="heading_subtotal">Subtotal</div>
-          <div class="heading_delete">&times;</div>
+          <div class="heading_delete"></div>
         </div>
+        <!-- div content_items start -->
         <div class="content_items">
           <div class="content_item">
             <div class="item_main">
@@ -164,7 +165,7 @@
         <!-- div content_items end -->
         <div class="content_total">
           <div class="total_total">Total</div>
-          <div class="total_empty"></div>
+          <div class="total_empty_price"></div>
           <div class="total_empty"></div>
 
           <div class="total_sum">
@@ -178,24 +179,30 @@
       <section class="cart_addons">
         <h2>You might also like</h2>
         <div class="addon_items">
-          <article>
-            <img src="assets/images/hardcoded/care1.jpg" alt="care balsam" />
-            <div class="addon_item_hover">
-              <span>Add to cart</span>
-            </div>
-          </article>
-          <article>
-            <img src="assets/images/hardcoded/care2.jpg" alt="care spray" />
-            <div class="addon_item_hover">
-              <span>Add to cart</span>
-            </div>
-          </article>
-          <article>
-            <img src="assets/images/photos/gift.jpg" alt="gift box" />
-            <div class="addon_item_hover">
-              <span>Add to cart</span>
-            </div>
-          </article>
+          <a href="#">
+            <article>
+              <img src="assets/images/hardcoded/care1.jpg" alt="care balsam" />
+              <div class="addon_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+          <a href="#">
+            <article>
+              <img src="assets/images/hardcoded/care2.jpg" alt="care spray" />
+              <div class="addon_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
+          <a href="#">
+            <article>
+              <img src="assets/images/photos/gift.jpg" alt="gift box" />
+              <div class="addon_item_hover">
+                <span>Add to cart</span>
+              </div>
+            </article>
+          </a>
         </div>
       </section>
       <section class="cart_coupon">
@@ -203,10 +210,11 @@
         <input type="submit" value="Apply coupon" />
       </section>
       <section class="cart_checkout">
-        <a href="#" class="go_back">Go back</a>
+        <a href="new_arrivals.html" class="go_back">Continue shopping</a>
         <a href="checkout.html" class="checkout">Proceed to checkout</a>
       </section>
     </main>
     <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
   </body>
 </html>
