@@ -1,7 +1,170 @@
-body {
-  margin: 0;
+header {
+  z-index: 5;
 }
 
-#background_video {
+main {
+  padding-top: 98px;
+  color: var(--font-color);
+}
+
+.front_flex {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.front_sections {
+  position: relative;
+  text-align: center;
+}
+
+.front_sections video {
+  max-width: 100%;
   width: 100vw;
+  pointer-events: none;
+}
+
+#mobile_video {
+  display: none;
+}
+
+.front_sections h1 {
+  color: white;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+}
+
+.front_sections img {
+  max-width: 100%;
+}
+
+.shop_now {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+#shop_now_video {
+  top: 85%;
+}
+
+.shop_now a {
+  text-decoration: none;
+  color: var(--font-color);
+  font-size: 1.2rem;
+  display: inline-block;
+  border: 1px solid var(--font-color);
+  background-color: white;
+  padding: 0.6rem;
+  width: 14rem;
+  transition-duration: 0.2s;
+}
+
+.shop_now a:hover {
+  background-color: var(--green);
+}
+
+.customers {
+  position: relative;
+}
+
+.customers h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+}
+
+#instagram_left {
+  position: absolute;
+  transform: rotate(180deg);
+  width: 45px;
+  left: 10px;
+  top: 53%;
+  z-index: 1;
+}
+
+#instagram_right {
+  position: absolute;
+  width: 45px;
+  right: 10px;
+  top: 53%;
+  z-index: 1;
+}
+
+.customers_flex {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.customers_box {
+  position: relative;
+}
+
+.customers_profile {
+  max-width: 100%;
+}
+
+.customers_box:hover .customers_profile {
+  opacity: 0.5;
+}
+
+.customers_icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.2s linear;
+}
+
+.customers_box:hover .customers_icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+@media screen and (max-width: 850px) {
+  main {
+    padding-top: 60px;
+  }
+
+  .front_flex {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #mobile_video {
+    display: initial;
+  }
+
+  #background_video {
+    display: none;
+  }
+
+  #sustainability {
+    display: none;
+  }
+
+  #sustainability_mobile {
+    display: initial;
+  }
+
+  .front_sections h1 {
+    font-size: 2.7rem;
+  }
+
+  .shop_now a {
+    font-size: 1rem;
+    width: 11rem;
+  }
+
+  #instagram_left,
+  #instagram_right {
+    width: 40px;
+  }
+  .customers_flex a:nth-of-type(-n + 4) {
+    display: none;
+  }
 }
