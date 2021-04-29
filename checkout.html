@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/checkout.css" />
+    <title>Checkout</title>
+  </head>
+  <body>
+    <header>
+      <nav class="menu_first_line" id="menu_first_line_id">
+        <img
+          id="hamburger_id"
+          src="assets/images/icons/hamburger.svg"
+          alt="Menu"
+        />
+        <a class="danish_flag" href="#"
+          ><img src="assets/images/icons/danishflag.svg" alt="DA"
+        /></a>
+        <div class="search">
+          <img
+            id="search_icon_id"
+            src="assets/images/icons/search.svg"
+            alt="Search"
+          />
+          <div class="search_box hidden">
+            <input
+              class="search_text"
+              type="text"
+              name="search_item"
+              placeholder="Type to search"
+            />
+          </div>
+        </div>
+        <div class="logo_width">
+          <a class="logo" href="index.html"
+            ><img src="assets/images/icons/logo.svg" alt="Silfen"
+          /></a>
+        </div>
+        <a class="heart" href="#"
+          ><img src="assets/images/icons/heart.svg" alt="Liked"
+        /></a>
+        <a class="shopping_bag" href="#"
+          ><img src="assets/images/icons/shopping_bag.svg" alt="Cart"
+        /></a>
+      </nav>
+      <nav class="menu_second_line" id="menu_second_line_id">
+        <img
+          class="hidden"
+          id="cross_id"
+          src="assets/images/icons/cross.svg"
+          alt="Menu"
+        />
+        <img
+          class="hidden"
+          id="mobile_flag_id"
+          src="assets/images/icons/danishflag.svg"
+          alt="DA"
+        />
+        <ul>
+          <li><a href="new_arrivals.html">New arrivals</a></li>
+          <li class="menu_dropdown">
+            <a href="#">All bags</a>
+            <div class="menu_mobile_arrows">
+              <img
+                id="menu_chevron_down1"
+                src="assets/images/icons/chevron-down.svg"
+                alt="down"
+              />
+              <img
+                class="hidden"
+                id="menu_chevron_up1"
+                src="assets/images/icons/chevron-up.svg"
+                alt="up"
+              />
+            </div>
+            <ul class="hidden" id="dropdown_content1">
+              <li><a href="#">Bumbags</a></li>
+              <li><a href="#">Shoulder bags</a></li>
+              <li><a href="#">Crossbody bags</a></li>
+              <li><a href="#">Wallets</a></li>
+              <li><a href="#">Tote bags</a></li>
+              <li><a href="#">Mini bags</a></li>
+              <li><a href="#">Care products</a></li>
+            </ul>
+          </li>
+          <li class="menu_dropdown">
+            <a href="collections.html">Collections</a>
+            <div class="menu_mobile_arrows">
+              <img
+                id="menu_chevron_down2"
+                src="assets/images/icons/chevron-down.svg"
+                alt="down"
+              />
+              <img
+                class="hidden"
+                id="menu_chevron_up2"
+                src="assets/images/icons/chevron-up.svg"
+                alt="up"
+              />
+            </div>
+            <ul class="hidden" id="dropdown_content2">
+              <li><a href="#">Snow queen</a></li>
+              <li><a href="#">Classic</a></li>
+              <li><a href="#">Recycled</a></li>
+            </ul>
+          </li>
+          <li><a href="sale.html">Sale</a></li>
+          <li><a href="sustainability.html">Sustainability</a></li>
+          <li><a href="about_us.html">About us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="checkout_heading">
+        <h1>Checkout</h1>
+      </section>
+      <section class="checkout_content">
+        <form action="#" id="checkout_form">
+          <fieldset>
+            <legend>Personal information</legend>
+            <label class="first_name_label"
+              >First name *
+              <input type="text" name="first_name" id="first_name" required />
+            </label>
+            <label class="last_name_label"
+              >Last name *
+              <input type="text" name="last_name" id="last_name" required />
+            </label>
+          </fieldset>
+          <!-- fieldset contact_info start -->
+          <fieldset class="contact_info">
+            <legend>Contact information</legend>
+            <label for="country" class="country_label"> Country * </label>
+            <select name="country" id="country" required>
+              <option value="denmark">Denmark</option>
+              <option value="sweden">Sweden</option>
+              <option value="norway">Norway</option>
+              <option value="uk">UK</option>
+              <option value="germany">Germany</option>
+              <option value="greece">Greece</option>
+              <option value="netherlands">The Netherlands</option>
+            </select>
+            <label for="street" class="street_label"
+              >Street name *
+              <input type="text" name="street" id="street" required />
+            </label>
+            <label for="house" class="house_label"
+              >House *
+              <input type="text" name="house" id="house" required />
+            </label>
+            <label for="city" class="city_label"
+              >City / Town *
+              <input type="text" name="city" id="city" required />
+            </label>
+            <label for="postcode" class="postcode_label"
+              >Postcode *
+              <input type="text" name="postcode" id="postcode" required />
+            </label>
+            <label for="phone" class="phone_label"
+              >Phone number *
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="50 30 30 30"
+                required
+              />
+            </label>
+            <label for="email" class="email_label"
+              >Email address *
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                placeholder="Example@gmail.com"
+              />
+            </label>
+          </fieldset>
+          <!-- fieldset contact_info end -->
+          <fieldset>
+            <label
+              for="different_address"
+              class="different_address_label"
+            ></label>
+            <input
+              type="checkbox"
+              name="different_address"
+              id="different_address"
+            />
+          </fieldset>
+          <!-- fieldset shipping_info start -->
+          <fieldset class="shipping_info">
+            <legend>Shipping information</legend>
+            <label for="country" class="country_label"> Country * </label>
+            <select name="country" id="country" required>
+              <option value="denmark">Denmark</option>
+              <option value="sweden">Sweden</option>
+              <option value="norway">Norway</option>
+              <option value="uk">UK</option>
+              <option value="germany">Germany</option>
+              <option value="greece">Greece</option>
+              <option value="netherlands">The Netherlands</option>
+            </select>
+            <label for="street" class="street_label"
+              >Street name *
+              <input type="text" name="street" id="street" required />
+            </label>
+            <label for="house" class="house_label"
+              >House *
+              <input type="text" name="house" id="house" required />
+            </label>
+            <label for="city" class="city_label"
+              >City / Town *
+              <input type="text" name="city" id="city" required />
+            </label>
+            <label for="postcode" class="postcode_label"
+              >Postcode *
+              <input type="text" name="postcode" id="postcode" required />
+            </label>
+            <label for="phone" class="phone_label"
+              >Phone number *
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="50 30 30 30"
+                required
+              />
+            </label>
+            <label for="email" class="email_label"
+              >Email address *
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                placeholder="Example@gmail.com"
+              />
+            </label>
+          </fieldset>
+          <!-- fieldset shipping_info end -->
+          <fieldset class="buttons">
+            <a href="new_arrivals.html" class="go_back">Continue shopping</a>
+            <input type="submit" value="Place order" />
+          </fieldset>
+        </form>
+      </section>
+      <!-- section checkout_content end -->
+    </main>
+    <aside class="order_summary">
+      <div class="summary_heading">Order summary</div>
+      <div class="summary_items">
+        <div class="summary_item"></div>
+      </div>
+      <div class="fee">
+        Shipping fee: <span><span class="fee_number">25</span> DKK</span>
+      </div>
+      <div class="total">
+        Order total: <span><span class="total_number">823</span> DKK</span>
+      </div>
+    </aside>
+    <script src="js/main.js"></script>
+    <script src="js/checkout.js"></script>
+  </body>
+</html>
