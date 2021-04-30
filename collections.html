@@ -6,9 +6,144 @@
     <meta name="robots" content="noindex, nofollow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/collections.css" />
     <title>Collections</title>
   </head>
   <body>
+    <header>
+      <nav class="menu_first_line" id="menu_first_line_id">
+        <img
+          id="hamburger_id"
+          src="assets/images/icons/hamburger.svg"
+          alt="Menu"
+        />
+        <a class="danish_flag" href="#"
+          ><img src="assets/images/icons/danishflag.svg" alt="DA"
+        /></a>
+        <div class="search">
+          <img
+            id="search_icon_id"
+            src="assets/images/icons/search.svg"
+            alt="Search"
+          />
+          <div class="search_box hidden">
+            <input
+              class="search_text"
+              type="text"
+              name="search_item"
+              placeholder="Type to search"
+            />
+          </div>
+        </div>
+        <div class="logo_width">
+          <a class="logo" href="index.html"
+            ><img src="assets/images/icons/logo.svg" alt="Silfen"
+          /></a>
+        </div>
+        <a class="heart" href="#"
+          ><img src="assets/images/icons/heart.svg" alt="Liked"
+        /></a>
+        <a class="shopping_bag" href="cart.html"
+          ><img src="assets/images/icons/shopping_bag.svg" alt="Cart"
+        /></a>
+      </nav>
+      <nav class="menu_second_line" id="menu_second_line_id">
+        <img
+          class="hidden"
+          id="cross_id"
+          src="assets/images/icons/cross.svg"
+          alt="Menu"
+        />
+        <img
+          class="hidden"
+          id="mobile_flag_id"
+          src="assets/images/icons/danishflag.svg"
+          alt="DA"
+        />
+        <ul>
+          <li><a href="new_arrivals.html">New arrivals</a></li>
+          <li class="menu_dropdown">
+            <a href="#">All bags</a>
+            <div class="menu_mobile_arrows">
+              <img
+                id="menu_chevron_down1"
+                src="assets/images/icons/chevron-down.svg"
+                alt="down"
+              />
+              <img
+                class="hidden"
+                id="menu_chevron_up1"
+                src="assets/images/icons/chevron-up.svg"
+                alt="up"
+              />
+            </div>
+            <ul class="hidden" id="dropdown_content1">
+              <li><a href="#">Bumbags</a></li>
+              <li><a href="#">Shoulder bags</a></li>
+              <li><a href="#">Crossbody bags</a></li>
+              <li><a href="#">Wallets</a></li>
+              <li><a href="#">Tote bags</a></li>
+              <li><a href="#">Mini bags</a></li>
+              <li><a href="#">Care products</a></li>
+            </ul>
+          </li>
+          <li class="menu_dropdown">
+            <a class="active" href="collections.html">Collections</a>
+            <div class="menu_mobile_arrows">
+              <img
+                id="menu_chevron_down2"
+                src="assets/images/icons/chevron-down.svg"
+                alt="down"
+              />
+              <img
+                class="hidden"
+                id="menu_chevron_up2"
+                src="assets/images/icons/chevron-up.svg"
+                alt="up"
+              />
+            </div>
+            <ul class="hidden" id="dropdown_content2">
+              <li><a href="#">Snow queen</a></li>
+              <li><a href="#">Classic</a></li>
+              <li><a href="#">Recycled</a></li>
+            </ul>
+          </li>
+          <li><a href="sale.html">Sale</a></li>
+          <li><a href="sustainability.html">Sustainability</a></li>
+          <li><a href="about_us.html">About us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Collections</h1>
+      <section class="front_sections">
+        <img src="assets/images/photos/snow_queen.jpg" alt="Snow queen" />
+        <img
+          src="assets/images/photos/snow_queen_mobile.jpg"
+          alt="Snow queen"
+        />
+        <div class="shop_now">
+          <h2>Snow queen</h2>
+          <a href="#">Shop now</a>
+        </div>
+      </section>
+      <section class="front_sections">
+        <img src="assets/images/photos/recycled.jpg" alt="Recycled" />
+        <img src="assets/images/photos/recycled_mobile.jpg" alt="Recycled" />
+        <div class="shop_now">
+          <h2>Recycled</h2>
+          <a href="#">Shop now</a>
+        </div>
+      </section>
+      <section class="front_sections">
+        <img src="assets/images/photos/classic.jpg" alt="Classic" />
+        <img src="assets/images/photos/classic_mobile.jpg" alt="Classic" />
+        <div class="shop_now">
+          <h2>Classic</h2>
+          <a href="#">Shop now</a>
+        </div>
+      </section>
+    </main>
     <script src="js/main.js"></script>
   </body>
 </html>
