@@ -201,7 +201,7 @@
               <label for="country_ship" class="country_label">
                 Country *
               </label>
-              <select name="country_ship" id="country_ship" required>
+              <select name="country_ship" id="country_ship">
                 <option value="denmark">Denmark</option>
                 <option value="sweden">Sweden</option>
                 <option value="norway">Norway</option>
@@ -215,26 +215,21 @@
               <label for="street_ship" class="street_label"
                 >Street name *
               </label>
-              <input type="text" name="street_ship" id="street_ship" required />
+              <input type="text" name="street_ship" id="street_ship" />
             </div>
             <div class="house_wrapper">
               <label for="house_ship" class="house_label">House * </label>
-              <input type="text" name="house_ship" id="house_ship" required />
+              <input type="text" name="house_ship" id="house_ship" />
             </div>
             <div class="city_wrapper">
               <label for="city_ship" class="city_label">City / Town * </label>
-              <input type="text" name="city_ship" id="city_ship" required />
+              <input type="text" name="city_ship" id="city_ship" />
             </div>
             <div class="postcode_wrapper">
               <label for="postcode_ship" class="postcode_label"
                 >Postcode *
               </label>
-              <input
-                type="text"
-                name="postcode_ship"
-                id="postcode_ship"
-                required
-              />
+              <input type="text" name="postcode_ship" id="postcode_ship" />
             </div>
             <div class="phone_wrapper">
               <label for="phone_ship" class="phone_label"
@@ -245,7 +240,6 @@
                 name="phone_ship"
                 id="phone_ship"
                 placeholder="50 30 30 30"
-                required
               />
             </div>
             <div class="email_wrapper">
@@ -256,7 +250,6 @@
                 type="email"
                 name="email_ship"
                 id="email_ship"
-                required
                 placeholder="Example@gmail.com"
               />
             </div>
@@ -279,7 +272,12 @@
       </article>
       <section class="buttons">
         <a href="new_arrivals.html" class="go_back">Continue shopping</a>
-        <input type="submit" form="checkout_form" value="Place order" />
+        <input
+          type="submit"
+          form="checkout_form"
+          value="Place order"
+          id="submit_checkout"
+        />
       </section>
     </main>
 

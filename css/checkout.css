@@ -1,15 +1,7 @@
 body {
   font-family: var(--body-text);
   color: var(--font-color);
-  font-size: 1.5rem;
-  /* display: grid;
-  grid-template-areas:
-    "h h"
-    "m a";
-  grid-template-columns: 0.6fr 0.5fr;
-  grid-template-rows: min-content min-content 1fr;
-  gap: 2rem; */
-  /* add one more row for footer */
+  font-size: 1.2rem;
 }
 
 header {
@@ -48,6 +40,7 @@ h1 {
 
 fieldset {
   border: none;
+  margin-top: 3rem;
 }
 
 legend {
@@ -64,10 +57,6 @@ input:not(input#different_address) {
   width: 100%;
   border: 0.5px solid #656b65;
   border-radius: 2px;
-}
-
-fieldset {
-  margin-top: 4rem;
 }
 
 /* personal information fieldset */
@@ -96,8 +85,13 @@ fieldset {
 /* personal information fieldset end */
 
 /* contact and shipping information fieldsets */
-.contact_info,
 .shipping_info {
+  display: none;
+  grid-template-columns: 0.7fr 0.3fr;
+  gap: 1rem;
+}
+
+.contact_info {
   display: grid;
   grid-template-columns: 0.7fr 0.3fr;
   gap: 1rem;
@@ -140,12 +134,102 @@ select {
   width: 1.5rem;
   margin-top: 5px;
 }
+
+input[type="checkbox"] {
+  line-height: 2.1ex;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  left: -999em;
+}
+
+input[type="checkbox"] + label {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+input[type="checkbox"] + label::before {
+  content: "";
+  display: inline-block;
+  vertical-align: -25%;
+  height: 2ex;
+  width: 2ex;
+  background-color: white;
+  border: 1px solid rgb(52, 101, 57);
+  border-radius: 4px;
+  box-shadow: inset 0 2px 5px rgba(52, 101, 57, 0.25);
+  margin-right: 0.5em;
+}
+
+input[type="checkbox"]:checked + label::after {
+  content: "";
+  position: absolute;
+  width: 1.2ex;
+  height: 0.4ex;
+  background: rgba(0, 0, 0, 0);
+  top: 0.9ex;
+  left: 0.4ex;
+  border: 3px solid #45874c;
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
 /* contact and shipping information fieldsets end */
 
 /* buttons section */
 .buttons {
   padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
+
 a.go_back {
   text-decoration: none;
+  color: var(--dark-blue);
+  padding: 1rem 0;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--dark-blue);
+  text-align: center;
+  margin-right: 1rem;
+  transition: 0.5s background-color;
+}
+
+a.go_back:hover {
+  background-color: #d8e8f3;
+}
+
+input[type="submit"]#submit_checkout {
+  text-decoration: none;
+  background-color: var(--blue);
+  color: white;
+  padding: 1rem 0;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--dark-blue);
+  text-align: center;
+  margin-right: 1rem;
+  transition: 0.5s background-color;
+  font-size: 1.2rem;
+  font-family: var(--body-text);
+  cursor: pointer;
+}
+
+input[type="submit"]#submit_checkout:hover {
+  background-color: var(--dark-blue);
+}
+/* buttons section end */
+
+/* order summary section */
+.order_summary {
+  margin-top: 3rem;
+  margin-left: 2rem;
 }
