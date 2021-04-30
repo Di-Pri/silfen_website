@@ -49,6 +49,7 @@ main > h1 {
   display: inline-block;
   border: 1px solid var(--font-color);
   background-color: white;
+  background: rgba(255, 255, 255, 0.8);
   padding: 0.6rem;
   width: 14rem;
   transition-duration: 0.2s;
