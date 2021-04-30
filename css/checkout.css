@@ -1,7 +1,7 @@
 body {
   font-family: var(--body-text);
   color: var(--font-color);
-  font-size: calc(0.6rem + 1vw);
+  font-size: calc(0.5rem + 0.8vw);
 }
 
 header {
@@ -116,7 +116,7 @@ input:not(input#different_address) {
 
 select {
   height: 2.5rem;
-  font-size: calc(0.6rem + 1vw);
+  font-size: calc(0.5rem + 0.8vw);
   font-family: var(--body-text);
   border: 0.5px solid #656b65;
   border-radius: 2px;
@@ -125,7 +125,7 @@ select {
 .phone_wrapper input::placeholder,
 .email_wrapper input::placeholder {
   height: 2.5rem;
-  font-size: calc(0.6rem + 1vw);
+  font-size: calc(0.5rem + 0.6vw);
   font-family: var(--body-text);
   color: #d3d3d3;
 }
@@ -249,7 +249,7 @@ h2 {
 .summary_item {
   background-color: white;
   display: grid;
-  grid-template-columns: 1fr 1.1fr 1fr;
+  grid-template-columns: 0.7fr 1.2fr 0.7fr;
   grid-template-rows: 1fr 1fr;
   border: 1px solid var(--font-color);
   margin-bottom: 1rem;
@@ -401,11 +401,15 @@ h2 {
 }
 
 @media only screen and (max-width: 600px) {
-  .main_name {
+  .summary_item .item_image > img {
+    max-width: 80px;
+    border: none;
+  }
+  .item_main_name {
     grid-column: 1 / span 2;
     grid-row: 1 / span 1;
   }
-  .main_color {
+  .item_main_color {
     grid-column: 1 / span 1;
     grid-row: 2 / span 1;
   }
@@ -416,13 +420,12 @@ h2 {
 }
 
 @media only screen and (max-width: 400px) {
-  .summary_item .item_image > img {
-    max-width: 80px;
-    border: none;
-  }
-
   .order_summary {
     font-size: calc(0.6rem + 0.2vw);
+  }
+
+  .summary_item {
+    grid-template-columns: 0.9fr 1.2fr 0.7fr;
   }
 
   .phone_wrapper input::placeholder,
