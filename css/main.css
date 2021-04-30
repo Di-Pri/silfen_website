@@ -174,3 +174,112 @@ header img {
     height: 28px;
   }
 }
+
+/* footer stylings */
+footer.main_footer {
+  font-size: 1.1rem;
+  background-color: var(--green);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.6fr;
+  grid-template-rows: 0.8fr 0.7fr;
+  padding-top: 0.5rem;
+  border: 1px solid var(--font-color);
+  padding: 0;
+  margin-top: 4rem;
+}
+
+.about {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--font-color);
+  border-right: 1px solid var(--font-color);
+}
+
+.faq {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--font-color);
+  border-right: 1px solid var(--font-color);
+}
+
+.follow {
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 1;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--font-color);
+  border-right: 1px solid var(--font-color);
+}
+
+.signup {
+  grid-column: 4 / span 1;
+  grid-row: 1 / span 1;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--font-color);
+}
+
+.copyright {
+  grid-column: 1 / span 3;
+  grid-row: 2 / span 1;
+  padding: 1.5rem;
+  border-right: 1px solid var(--font-color);
+}
+
+.payment {
+  grid-column: 4 / span 1;
+  grid-row: 2 / span 1;
+  padding: 1.5rem;
+}
+
+.payment > h4 {
+  margin-top: 0;
+}
+
+.footer_icon {
+  width: 3.3rem;
+  height: 2.5rem;
+  margin: 0.3rem;
+}
+
+.footer_icon_social {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0.6rem;
+}
+
+input[type="text"].signup_email {
+  height: 2.3rem;
+  width: 15rem;
+  font-size: 1.1rem;
+}
+
+input[type="text"].signup_email::placeholder {
+  padding-left: 1rem;
+}
+
+input[type="submit"].signup_submit {
+  height: 2.7rem;
+  width: 8rem;
+  background-color: #000000;
+  color: white;
+  font-size: 1.1rem;
+  font-family: var(--body-text);
+  margin: 0;
+  margin-left: -5px;
+  cursor: pointer;
+}
+
+input[type="submit"].signup_submit:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+footer.main_footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer.main_footer h4 {
+  margin-bottom: 0.5rem;
+}
