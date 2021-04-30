@@ -56,9 +56,22 @@ main {
   display: inline-block;
   border: 1px solid var(--font-color);
   background-color: white;
+  background: rgba(255, 255, 255, 0.8);
   padding: 0.6rem;
   width: 14rem;
   transition-duration: 0.2s;
+}
+
+a.video_button {
+  color: white;
+  border: 1.5px solid white;
+  background: transparent;
+}
+
+a.video_button:hover {
+  color: var(--font-color);
+  background-color: var(--green);
+  border: 1.5px solid var(--font-color);
 }
 
 .shop_now a:hover {
