@@ -283,3 +283,16 @@ footer.main_footer ul {
 footer.main_footer h4 {
   margin-bottom: 0.5rem;
 }
+
+a.link_social {
+  text-decoration: none;
+}
+
+a.footer_menu_link {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+a.footer_menu_link:hover {
+  opacity: 0.7;
+}
