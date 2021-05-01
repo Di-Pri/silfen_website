@@ -647,7 +647,7 @@ img.icon_pagination {
     cursor: pointer;
   }
 
-  input[type="submit"] {
+  input[type="submit"].filter_submit {
     width: 100%;
     background-color: var(--blue);
     color: white;

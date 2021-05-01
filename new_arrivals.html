@@ -233,7 +233,6 @@
           <label for="category" class="category">
             <div class="label-chevron">
               <span>Category</span>
-              <!-- <img src="assets/images/icons/chevron-down.svg" alt="close icon" data-id="category"> -->
               <div class="chevron" data-id="category"></div>
             </div>
           </label>
@@ -661,19 +660,33 @@
     </main>
     <footer class="main_footer">
       <div class="about">
-        <h4>About SILFEN</h4>
+        <div class="footer_heading_wrapper">
+          <h4>About SILFEN</h4>
+          <img
+            src="assets/images/icons/chevron-down.svg"
+            alt="chevron down icon"
+          />
+        </div>
         <ul>
           <li><a href="#" class="footer_menu_link">About us</a></li>
           <li><a href="#" class="footer_menu_link">Contact us</a></li>
         </ul>
+        <div class="footer_divider"></div>
       </div>
       <div class="faq">
-        <h4>FAQ</h4>
+        <div class="footer_heading_wrapper">
+          <h4>FAQ</h4>
+          <img
+            src="assets/images/icons/chevron-down.svg"
+            alt="chevron down icon"
+          />
+        </div>
         <ul>
           <li><a href="#" class="footer_menu_link">Delivery</a></li>
           <li><a href="#" class="footer_menu_link">Return</a></li>
           <li><a href="#" class="footer_menu_link">Privacy policy</a></li>
         </ul>
+        <div class="footer_divider"></div>
       </div>
       <div class="follow">
         <h4>Follow us</h4>
@@ -718,7 +731,7 @@
           <img
             src="assets/images/icons/pinterest.svg"
             alt="pinterest icon"
-            class="footer_icon_social"
+            class="footer_icon_social_l"
           />
         </a>
       </div>
@@ -726,10 +739,11 @@
         <h4>keep in touch, get 10% discount</h4>
         <form action="#" class="signup_form">
           <input
-            type="text"
+            type="email"
             name="signup_email"
             id="signup_email"
             placeholder="enter email"
+            required
             class="signup_email"
           />
           <input type="submit" value="sign up" class="signup_submit" />
@@ -743,33 +757,46 @@
       </div>
       <div class="payment">
         <h4>We accept</h4>
-        <img
-          src="assets/images/icons/dankort.svg"
-          alt="dankort"
-          class="footer_icon"
-        />
-        <img
-          src="assets/images/icons/visa.svg"
-          alt="visa"
-          class="footer_icon"
-        />
-        <img
-          src="assets/images/icons/mastercard.svg"
-          alt="mastercard"
-          class="footer_icon"
-        />
-        <img
-          src="assets/images/icons/maestro.svg"
-          alt="maestro"
-          class="footer_icon"
-        />
-        <img src="assets/images/icons/jcb.svg" alt="jcb" class="footer_icon" />
-        <img
-          src="assets/images/icons/mobilepay.svg"
-          alt="mobile pay"
-          class="footer_icon"
-        />
+        <div class="payment_images">
+          <img
+            src="assets/images/icons/dankort.svg"
+            alt="dankort"
+            class="footer_icon"
+          />
+          <img
+            src="assets/images/icons/visa.svg"
+            alt="visa"
+            class="footer_icon"
+          />
+          <img
+            src="assets/images/icons/mastercard.svg"
+            alt="mastercard"
+            class="footer_icon"
+          />
+          <img
+            src="assets/images/icons/maestro.svg"
+            alt="maestro"
+            class="footer_icon"
+          />
+          <img
+            src="assets/images/icons/jcb.svg"
+            alt="jcb"
+            class="footer_icon"
+          />
+          <img
+            src="assets/images/icons/mobilepay.svg"
+            alt="mobile pay"
+            class="footer_icon"
+          />
+        </div>
       </div>
+      <section class="modal" id="modal_signup">
+        <article class="modal_content">
+          <span class="signup_close">&times;</span>
+          <h2>Thank you for signing up</h2>
+          <p>We will keep you posted</p>
+        </article>
+      </section>
     </footer>
     <script src="js/main.js"></script>
     <script src="js/new_arrivals.js"></script>

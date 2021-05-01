@@ -71,3 +71,64 @@ function topMenu() {
     document.body.style.overflow = "visible";
   }
 }
+
+// sign up form in the footer
+const signupForm = document.querySelector(".signup_form");
+const modalSignup = document.querySelector("#modal_signup");
+
+signupForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  showModal();
+  clearForm();
+});
+
+function showModal() {
+  modalSignup.style.display = "block";
+  document.querySelector("span.signup_close").addEventListener("click", (e) => {
+    e.stopPropagation();
+    modalSignup.style.display = "none";
+  });
+  window.addEventListener("click", () => {
+    modalSignup.style.display = "none";
+  });
+}
+
+function clearForm() {
+  console.log(signupForm.elements);
+  signupForm.elements.signup_email.value = "";
+}
+
+// dropdowns in the footer
+const aboutFooterWrapper = document.querySelector(
+  ".about > .footer_heading_wrapper"
+);
+const faqFooterWrapper = document.querySelector(
+  ".faq > .footer_heading_wrapper"
+);
+
+console.log(aboutFooterWrapper, faqFooterWrapper);
+
+aboutFooterWrapper.addEventListener("click", openFooterSection);
+faqFooterWrapper.addEventListener("click", openFooterSection);
+
+function openFooterSection() {
+  //console.log(this.parentElement.className);
+  const openSelector = "." + this.parentElement.className + " ul";
+  const chevronImgSelector = "." + this.parentElement.className + " img";
+  const chevronImg = document.querySelector(chevronImgSelector);
+  console.log(chevronImg);
+  //console.log(openSelector);
+  const elementToOpen = document.querySelector(openSelector);
+  //console.log(elementToOpen);
+  elementToOpen.style.display = "block";
+  chevronImg.src = "../assets/images/icons/chevron-up.svg";
+  this.removeEventListener("click", openFooterSection);
+  this.addEventListener("click", closeFooterSection);
+  function closeFooterSection() {
+    console.log(this);
+    elementToOpen.style.display = "none";
+    chevronImg.src = "../assets/images/icons/chevron-down.svg";
+    this.removeEventListener("click", closeFooterSection);
+    this.addEventListener("click", openFooterSection);
+  }
+}
