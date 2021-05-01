@@ -121,13 +121,13 @@ function openFooterSection() {
   const elementToOpen = document.querySelector(openSelector);
   //console.log(elementToOpen);
   elementToOpen.style.display = "block";
-  chevronImg.src = "../assets/images/icons/chevron-up.svg";
+  chevronImg.src = "assets/images/icons/chevron-up.svg";
   this.removeEventListener("click", openFooterSection);
   this.addEventListener("click", closeFooterSection);
   function closeFooterSection() {
     console.log(this);
     elementToOpen.style.display = "none";
-    chevronImg.src = "../assets/images/icons/chevron-down.svg";
+    chevronImg.src = "assets/images/icons/chevron-down.svg";
     this.removeEventListener("click", closeFooterSection);
     this.addEventListener("click", openFooterSection);
   }
