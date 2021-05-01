@@ -239,6 +239,7 @@ a.checkout:hover {
     font-size: 0.9rem;
     margin-top: 4rem;
     padding: 0;
+    width: 100%;
   }
 
   h1 {
@@ -276,6 +277,7 @@ a.checkout:hover {
 
   .cart_coupon {
     order: 2;
+    width: 100%;
   }
 
   .cart_addons {
