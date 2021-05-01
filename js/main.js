@@ -106,7 +106,7 @@ const faqFooterWrapper = document.querySelector(
   ".faq > .footer_heading_wrapper"
 );
 
-console.log(aboutFooterWrapper, faqFooterWrapper);
+//console.log(aboutFooterWrapper, faqFooterWrapper);
 
 aboutFooterWrapper.addEventListener("click", openFooterSection);
 faqFooterWrapper.addEventListener("click", openFooterSection);
