@@ -38,6 +38,10 @@ h1 {
   text-transform: uppercase;
 }
 
+#checkout_form {
+  font-size: 1rem;
+}
+
 fieldset {
   border: none;
   margin-top: 3rem;
@@ -52,7 +56,7 @@ label:not(label.different_address_label) {
   display: block;
 }
 
-input:not(input#different_address) {
+#checkout_form input:not(input#different_address) {
   height: 2rem;
   width: 100%;
   border: 0.5px solid #656b65;
@@ -202,6 +206,7 @@ a.go_back {
   text-align: center;
   margin-right: 1rem;
   transition: 0.5s background-color;
+  font-size: 1rem;
 }
 
 a.go_back:hover {
@@ -219,7 +224,7 @@ input[type="submit"]#submit_checkout {
   text-align: center;
   margin-right: 1rem;
   transition: 0.5s background-color;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: var(--body-text);
   cursor: pointer;
 }
