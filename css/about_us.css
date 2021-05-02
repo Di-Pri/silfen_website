@@ -1,0 +1,125 @@
+header {
+  top: 0;
+}
+
+main {
+  margin-top: 8rem;
+  font-size: calc(0.6rem + 0.6vw);
+  color: var(--font-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: min-content 1fr 1fr;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 1;
+  margin-left: calc(2rem + 1vw);
+  margin-bottom: 4rem;
+}
+
+.mission_text {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  padding: 0 calc(2rem + 1vw);
+  line-height: 1.5rem;
+}
+
+.mission_picture {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.perfect_bag_picture {
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
+}
+
+.perfect_bag_text {
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+  padding: 0 calc(2rem + 1vw);
+  padding-top: 4rem;
+  line-height: 1.5rem;
+}
+
+.about_us_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1000px) {
+  .mission_picture {
+    display: none;
+  }
+
+  .mission_text {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+    /* padding: 0 calc(2rem + 1vw); */
+    margin: auto;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    line-height: 1.5rem;
+  }
+
+  .mission_text h2 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    font-size: calc(0.9rem + 0.4vw);
+    grid-template-columns: 1fr 1fr;
+    grid-row: min-content 1fr min-content min-content;
+  }
+
+  .mission_text h2 {
+    text-align: start;
+  }
+
+  .perfect_bag_picture {
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;
+  }
+
+  .perfect_bag_text {
+    grid-column: 1 / span 2;
+    grid-row: 4 / span 1;
+    padding: 0 calc(2rem + 1vw);
+    padding-top: 4rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    margin-top: 5rem;
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+    margin-left: calc(1rem + 0.5vw);
+  }
+
+  .perfect_bag_text,
+  .mission_text {
+    padding: 0 calc(1rem + 0.5vw);
+  }
+
+  .perfect_bag_text {
+    padding-top: 1rem;
+  }
+}
