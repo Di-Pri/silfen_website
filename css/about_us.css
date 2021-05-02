@@ -112,3 +112,14 @@ h1 {
   h1 {
     margin-bottom: 2rem;
     margin-left: calc(1rem + 0.5vw);
+  }
+
+  .perfect_bag_text,
+  .mission_text {
+    padding: 0 calc(1rem + 0.5vw);
+  }
+
+  .perfect_bag_text {
+    padding-top: 1rem;
+  }
+}
