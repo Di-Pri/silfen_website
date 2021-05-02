@@ -345,8 +345,15 @@ a.footer_menu_link:hover {
   font-size: 1.5rem;
   text-align: center;
 }
+
+#modal_contact .modal_content {
+  width: 50%;
+}
+
 #modal_checkout .modal_content > h2,
-#modal_checkout .modal_content > p {
+#modal_checkout .modal_content > p,
+#modal_contact .modal_content > h2,
+#modal_contact .modal_content > p {
   margin: 2rem 1rem;
   text-align: start;
 }
@@ -356,10 +363,11 @@ a.footer_menu_link:hover {
 }
 
 .signup_close,
-.checkout_close {
+.checkout_close,
+.contact_close {
   color: var(--font-color);
   float: right;
-  font-size: 28px;
+  font-size: 45px;
   font-weight: bold;
 }
 
