@@ -29,3 +29,47 @@ function unCheck() {
   check.removeEventListener("click", unCheck);
   check.addEventListener("click", seeIfChecked);
 }
+
+// checkout form submit
+const checkoutForm = document.querySelector("#checkout_form");
+const modalCheckout = document.querySelector("#modal_checkout");
+
+checkoutForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  showModalCheckout();
+  clearFormCheckout();
+});
+
+function showModalCheckout() {
+  modalCheckout.style.display = "block";
+  document
+    .querySelector("span.checkout_close")
+    .addEventListener("click", (e) => {
+      e.stopPropagation();
+      modalCheckout.style.display = "none";
+    });
+  window.addEventListener("click", () => {
+    modalCheckout.style.display = "none";
+  });
+}
+
+function clearFormCheckout() {
+  console.log(checkoutForm.elements);
+  checkoutForm.elements.first_name.value = "";
+  checkoutForm.elements.last_name.value = "";
+  checkoutForm.elements.country.value = "";
+  checkoutForm.elements.street.value = "";
+  checkoutForm.elements.house.value = "";
+  checkoutForm.elements.city.value = "";
+  checkoutForm.elements.postcode.value = "";
+  checkoutForm.elements.phone.value = "";
+  checkoutForm.elements.email.value = "";
+
+  checkoutForm.elements.country_ship.value = "";
+  checkoutForm.elements.street_ship.value = "";
+  checkoutForm.elements.house_ship.value = "";
+  checkoutForm.elements.city_ship.value = "";
+  checkoutForm.elements.postcode_ship.value = "";
+  checkoutForm.elements.phone_ship.value = "";
+  checkoutForm.elements.email_ship.value = "";
+}
