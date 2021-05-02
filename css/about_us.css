@@ -59,6 +59,10 @@ h1 {
   object-fit: cover;
 }
 
+.main_footer.about_us_footer {
+  margin-top: 0;
+}
+
 @media screen and (max-width: 1000px) {
   .mission_picture {
     display: none;
@@ -69,13 +73,17 @@ h1 {
     grid-row: 2 / span 1;
     /* padding: 0 calc(2rem + 1vw); */
     margin: auto;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     max-width: 700px;
     line-height: 1.5rem;
   }
 
   .mission_text h2 {
     text-align: center;
+  }
+
+  .main_footer.about_us_footer {
+    margin-top: 3rem;
   }
 }
 
@@ -99,7 +107,7 @@ h1 {
     grid-column: 1 / span 2;
     grid-row: 4 / span 1;
     padding: 0 calc(2rem + 1vw);
-    padding-top: 4rem;
+    padding-top: 3rem;
     line-height: 1.5rem;
   }
 }
@@ -120,6 +128,6 @@ h1 {
   }
 
   .perfect_bag_text {
-    padding-top: 1rem;
+    padding-top: 2rem;
   }
 }
