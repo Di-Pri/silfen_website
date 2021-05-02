@@ -345,12 +345,18 @@ a.footer_menu_link:hover {
   font-size: 1.5rem;
   text-align: center;
 }
+#modal_checkout .modal_content > h2,
+#modal_checkout .modal_content > p {
+  margin: 2rem 1rem;
+  text-align: start;
+}
 
 .modal_content > h2 {
   text-transform: uppercase;
 }
 
-.signup_close {
+.signup_close,
+.checkout_close {
   color: var(--font-color);
   float: right;
   font-size: 28px;
