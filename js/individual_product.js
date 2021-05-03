@@ -25,7 +25,7 @@ function getData() {
 getData();
 
 function showProduct(product) {
-  console.log(product);
+  //console.log(product);
   document.querySelector("title").textContent =
     product.title.charAt(0).toUpperCase() + product.title.slice(1);
   document.querySelector(".product-description h1").textContent = product.title;
@@ -39,12 +39,69 @@ function showProduct(product) {
     document.querySelector(".price_regular").style.textDecoration = "none";
   }
   document.querySelector("#parag1").textContent = product.description;
-  //console.log(document.querySelector("#parag1"));
+
   document.querySelector("#parag2").innerHTML = product.details;
+  document.querySelector("#imageBox").src = product.primary_images[0].link;
+  document.querySelector("#imageBox").alt = product.title;
+
+  let color = product.primary_images[0].color;
+  console.log(color);
+  const smallImageTemplate = document.querySelector(".secondary_image_template")
+    .content;
+  // console.log(smallImageTemplate);
+  const smallImageParent = document.querySelector(".product-small-img");
+  product.secondary_images.forEach((elem) => {
+    //console.log(elem);
+    if (elem.color == color) {
+      const smallImageClone = smallImageTemplate.cloneNode(true);
+      //console.log(smallImageClone);
+      smallImageClone.querySelector(".secondary_image").src = elem.link;
+      //console.log(smallImageClone.querySelector(".secondary_image"));
+      smallImageParent.appendChild(smallImageClone);
+    }
+  });
+  const colorpickerTemplate = document.querySelector(".colorpicker_images")
+    .content;
+  //console.log(colorpickerTemplate);
+  const colorParent = document.querySelector(".colorpicker");
   product.primary_images.forEach((elem) => {
-    console.log(elem);
-    const colorpickerTemplate = document.querySelector(".colorpicker_images")
-      .content;
+    //console.log(elem);
+    if (elem.color == color) {
+      document.querySelector("#imageBox").src = elem.link;
+      //console.log(elem.link);
+    }
+    const colorpickerClone = colorpickerTemplate.cloneNode(true);
+    //console.log(colorpickerClone);
+    colorpickerClone.querySelector(".colorpicker_image").src = elem.link;
+    colorpickerClone.querySelector(".colorpicker_image").dataset.color =
+      elem.color;
+    colorParent.appendChild(colorpickerClone);
+  });
+
+  document.querySelectorAll(".colorpicker_image").forEach((image) => {
+    image.addEventListener("click", function (e) {
+      console.log(this.dataset.color);
+      color = this.dataset.color;
+      console.log(color);
+      product.primary_images.forEach((elem) => {
+        if (elem.color == color) {
+          document.querySelector("#imageBox").src = elem.link;
+          console.log(elem.color);
+          console.log(elem.link);
+        }
+      });
+      smallImageParent.innerHTML = "";
+      product.secondary_images.forEach((elem) => {
+        //console.log(elem);
+        if (elem.color == color) {
+          const smallImageClone = smallImageTemplate.cloneNode(true);
+          //console.log(smallImageClone);
+          smallImageClone.querySelector(".secondary_image").src = elem.link;
+          //console.log(smallImageClone.querySelector(".secondary_image"));
+          smallImageParent.appendChild(smallImageClone);
+        }
+      });
+    });
   });
 }
 
