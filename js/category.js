@@ -41,7 +41,7 @@ function showProducts(products) {
       product.primary_images[0].link;
     productsClone.querySelector(
       ".products_link"
-    ).href = `individual.html?product=${product._id}`;
+    ).href = `individual_product.html?product=${product._id}`;
     if (product.sale) {
       const discount = Math.floor(
         ((product.price_current - product.price_regular) /
