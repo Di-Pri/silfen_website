@@ -1,5 +1,9 @@
 window.addEventListener("load", start);
-let url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"new":true}`;
+
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get("category");
+
+let url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"category":"${category}"}`;
 const options = {
   method: "GET",
   headers: {
@@ -21,9 +25,12 @@ function start() {
 }
 
 function showProducts(products) {
-  //console.log(products);
-
+  console.log(products);
+  document.querySelector("h1").textContent = category;
+  document.querySelector("title").textContent = category;
   const productsTemplate = document.querySelector(".products_template").content;
+  const parentEl = document.querySelector(".products_content");
+  parentEl.innerHTML = "";
 
   products.forEach((product) => {
     //console.log(product);
@@ -61,8 +68,7 @@ function showProducts(products) {
       productsClone.querySelector(".item_icons_recycled").style.display =
         "none";
     }
-    const parentEl = document
-      .querySelector(".products_content")
-      .appendChild(productsClone);
+
+    parentEl.appendChild(productsClone);
   });
 }
