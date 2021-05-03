@@ -173,9 +173,16 @@
         </div>
         <div class="product-description">
           <h1>Siri</h1>
-          <h3 class="price">300 DKK</h3>
+          <h3 class="price">
+            <span class="price_current"
+              ><span class="price_current_number">300</span> DKK</span
+            >
+            <span class="price_regular">
+              <span class="price_regular_number">400</span> DKK
+            </span>
+          </h3>
           <div class="colorpicker">
-            <img
+            <!-- <img
               src="assets/images/photos/siri-main-zebra.jpg"
               alt=""
               onclick="myFunction(this)"
@@ -194,7 +201,7 @@
               src="assets/images/photos/siri-main-black.jpg"
               alt=""
               onclick="myFunction(this)"
-            />
+            /> -->
           </div>
           <div class="options">
             <div class="qty-flex">
@@ -311,6 +318,14 @@
           </div>
         </div>
       </div>
+      <template class="colorpicker_images">
+        <img
+          src=""
+          alt=""
+          class="colorpicker_image"
+          onclick="myFunction(this)"
+        />
+      </template>
     </main>
     <footer class="main_footer">
       <div class="about">

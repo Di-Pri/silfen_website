@@ -1,6 +1,9 @@
 * {
   margin: 0;
 }
+title {
+  text-transform: uppercase;
+}
 body {
   font-family: var(--body-text);
   color: var(--font-color);
@@ -27,6 +30,16 @@ p {
 }
 .product-description {
   margin-right: 2rem;
+}
+h1 {
+  text-transform: uppercase;
+}
+.price_current {
+  color: #da4e4e;
+}
+.price_regular {
+  text-decoration: line-through;
+  font-size: 1.1rem;
 }
 .gallery {
   display: flex;
