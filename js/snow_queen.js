@@ -1,5 +1,5 @@
 window.addEventListener("load", start);
-let url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"new":true}`;
+let url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"collection":"Snow queen"}`;
 const options = {
   method: "GET",
   headers: {

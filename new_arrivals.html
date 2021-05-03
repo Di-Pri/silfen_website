@@ -370,7 +370,7 @@
       </aside>
       <section class="products">
         <div class="products_content">
-          <a href="#" class="products_link">
+          <!-- <a href="#" class="products_link">
             <article class="products_item">
               <img
                 src="assets/images/hardcoded/bag1.jpg"
@@ -582,8 +582,8 @@
                 <span>Add to cart</span>
               </div>
             </article>
-          </a>
-          <a href="#" class="products_link">
+          </a> -->
+          <!-- <a href="#" class="products_link">
             <article class="products_item">
               <img
                 src="assets/images/hardcoded/bag2.jpg"
@@ -642,7 +642,7 @@
                 <span>Add to cart</span>
               </div>
             </article>
-          </a>
+          </a> -->
         </div>
         <footer class="products_footer">
           <span class="page_active">1</span>
@@ -657,6 +657,38 @@
           </span>
         </footer>
       </section>
+      <template class="products_template">
+        <a href="#" class="products_link">
+          <article class="products_item">
+            <img
+              src="assets/images/hardcoded/bag2.jpg"
+              alt="alexandra"
+              class="products_thumbnail"
+            />
+            <div class="item_icons">
+              <div class="item_icons_sale"><span>20</span>%</div>
+              <div class="item_icons_recycled">
+                <img
+                  src="assets/images/icons/recycled.svg"
+                  alt="recycled"
+                  class="recycled"
+                />
+              </div>
+            </div>
+            <h3 class="products_title">Alexandra</h3>
+            <p class="products_price">
+              <span class="sale_price"
+                ><span class="sale_price_number">150</span> DKK</span
+              >&nbsp;<span class="regular_price"
+                ><span class="regular_price_number"> 300</span> DKK</span
+              >
+            </p>
+            <div class="products_item_hover">
+              <span>Add to cart</span>
+            </div>
+          </article>
+        </a>
+      </template>
     </main>
     <footer class="main_footer">
       <div class="about">
@@ -801,6 +833,7 @@
       </section>
     </footer>
     <script src="js/main.js"></script>
+    <script src="js/filter.js"></script>
     <script src="js/new_arrivals.js"></script>
   </body>
 </html>
