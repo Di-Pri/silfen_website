@@ -14,6 +14,7 @@ function getData() {
   })
     .then((res) => res.json())
     .then((response) => {
+      document.querySelector(".loader_container").style.display = "none";
       //console.log(response);
       showProduct(response);
     })
