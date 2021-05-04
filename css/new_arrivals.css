@@ -277,7 +277,8 @@ label {
   margin-bottom: auto;
 }
 
-input[type="submit"].filter_submit {
+input[type="submit"].filter_submit,
+.reset_filter_btn {
   background-color: #f8f8f8;
   color: var(--dark-blue);
   border: 1px solid var(--dark-blue);
@@ -290,9 +291,23 @@ input[type="submit"].filter_submit {
   transition: 0.5s background-color;
 }
 
-input[type="submit"].filter_submit:hover {
+input[type="submit"].filter_submit:hover,
+.reset_filter_btn:hover {
   /* transform: scale(1.05); */
   background-color: #d8e8f3;
+}
+
+.reset_filter_btn:disabled {
+  background-color: #f8f8f8;
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  font-family: var(--body-text);
+  font-size: 1.5rem;
+  margin: 4rem 0;
+  width: 12rem;
+  height: 4rem;
+  cursor: default;
+  transition: 0.5s background-color;
 }
 
 section.products > .products_content {
@@ -405,6 +420,123 @@ img.recycled {
 .filter_mobile {
   display: none;
 }
+
+.filter_empty {
+  margin-left: 5rem;
+  font-size: 1.5rem;
+}
+
+/* preloader styling */
+.loader_container {
+  /* display: none; */
+  position: fixed;
+  z-index: 10;
+  padding-top: 200px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.loader {
+  position: relative;
+  width: 44px;
+  height: 8px;
+  margin: 12px auto;
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background: #ccc;
+  position: absolute;
+}
+
+.dot_1 {
+  animation: animateDot1 1.5s linear infinite;
+  left: 12px;
+  background: #e579b8;
+}
+
+.dot_2 {
+  animation: animateDot2 1.5s linear infinite;
+  animation-delay: 0.5s;
+  left: 24px;
+}
+
+.dot_3 {
+  animation: animateDot3 1.5s linear infinite;
+  left: 12px;
+}
+
+.dot_4 {
+  animation: animateDot4 1.5s linear infinite;
+  animation-delay: 0.5s;
+  left: 24px;
+}
+
+@keyframes animateDot1 {
+  0% {
+    transform: rotate(0deg) translateX(-12px);
+  }
+  25% {
+    transform: rotate(180deg) translateX(-12px);
+  }
+  75% {
+    transform: rotate(180deg) translateX(-12px);
+  }
+  100% {
+    transform: rotate(360deg) translateX(-12px);
+  }
+}
+@keyframes animateDot2 {
+  0% {
+    transform: rotate(0deg) translateX(-12px);
+  }
+  25% {
+    transform: rotate(-180deg) translateX(-12px);
+  }
+  75% {
+    transform: rotate(-180deg) translateX(-12px);
+  }
+  100% {
+    transform: rotate(-360deg) translateX(-12px);
+  }
+}
+@keyframes animateDot3 {
+  0% {
+    transform: rotate(0deg) translateX(12px);
+  }
+  25% {
+    transform: rotate(180deg) translateX(12px);
+  }
+  75% {
+    transform: rotate(180deg) translateX(12px);
+  }
+  100% {
+    transform: rotate(360deg) translateX(12px);
+  }
+}
+@keyframes animateDot4 {
+  0% {
+    transform: rotate(0deg) translateX(12px);
+  }
+  25% {
+    transform: rotate(-180deg) translateX(12px);
+  }
+  75% {
+    transform: rotate(-180deg) translateX(12px);
+  }
+  100% {
+    transform: rotate(-360deg) translateX(12px);
+  }
+}
+/* preloader styling end */
 
 /* slider styling */
 aside.filter .price_label {

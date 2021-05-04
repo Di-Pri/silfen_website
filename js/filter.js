@@ -33,7 +33,7 @@ function setLeftValue() {
     max = parseInt(_this.max);
 
   _this.value = Math.min(parseInt(_this.value), parseInt(inputRight.value) - 1);
-  console.log(_this.value);
+  //console.log(_this.value);
   document.querySelector("label.label-left > span").textContent = _this.value;
   var percent = ((_this.value - min) / (max - min)) * 100;
 
@@ -49,7 +49,7 @@ function setRightValue() {
     max = parseInt(_this.max);
 
   _this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value) + 1);
-  console.log(_this.value);
+  //console.log(_this.value);
   document.querySelector("label.label-right > span").textContent = _this.value;
   var percent = ((_this.value - min) / (max - min)) * 100;
 
