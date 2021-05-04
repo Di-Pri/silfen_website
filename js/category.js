@@ -41,6 +41,7 @@ function showProducts(products) {
   console.log(products);
   document.querySelector("h1").textContent = category;
   document.querySelector("title").textContent = category;
+  document.querySelector(".breadcrumbs_item_active").textContent = category;
   const productsTemplate = document.querySelector(".products_template").content;
   const parentEl = document.querySelector(".products_content");
   parentEl.innerHTML = "";

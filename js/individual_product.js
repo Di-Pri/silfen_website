@@ -26,9 +26,15 @@ function getData() {
 getData();
 
 function showProduct(product) {
-  //console.log(product);
+  console.log(product);
   document.querySelector("title").textContent =
     product.title.charAt(0).toUpperCase() + product.title.slice(1);
+  document.querySelector(".breadcrumbs_item_active").textContent =
+    product.title.charAt(0).toUpperCase() + product.title.slice(1);
+  document.querySelector(".category_link").textContent = product.category;
+  document.querySelector(".category_link").href =
+    "category.html?category=" + product.category;
+  console.log(document.querySelector(".category_link").href);
   document.querySelector(".product-description h1").textContent = product.title;
   if (product.sale) {
     document.querySelector(".price_current_number").textContent =
