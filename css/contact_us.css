@@ -3,12 +3,12 @@ header {
 }
 
 main {
-  margin-top: 8rem;
+  margin-top: 7rem;
   color: var(--font-color);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content 1fr 1fr;
-  font-size: calc(0.9rem + 0.3vw);
+  font-size: 15.5px;
 }
 
 /* breadcrumbs styling */
@@ -19,7 +19,7 @@ main {
 }
 
 main > .heading_wrapper {
-  margin-left: 1rem;
+  margin-left: 2rem;
   font-family: var(--body-text);
   grid-column: 1 / span 2;
   grid-row: 1 / span 1;
@@ -46,12 +46,6 @@ main > .heading_wrapper h1 {
   font-weight: 600;
 }
 /* breadcrumbs styling end */
-
-/* h1 {
-  grid-column: 1 / span 2;
-  grid-row: 1 / span 1;
-  margin-left: calc(2rem + 1vw);
-} */
 
 .contact_text {
   grid-column: 1 / span 1;
@@ -133,7 +127,6 @@ a.contact_insta:hover {
   main {
     margin-top: 4rem;
     grid-template-rows: min-content min-content;
-    font-size: calc(1rem + 0.5vw);
   }
   .contact_picture_1,
   .contact_picture_2 {

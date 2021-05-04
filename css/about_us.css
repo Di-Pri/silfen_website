@@ -3,8 +3,8 @@ header {
 }
 
 main {
-  margin-top: 8rem;
-  font-size: calc(0.6rem + 0.6vw);
+  margin-top: 7rem;
+  font-size: 15.5px;
   color: var(--font-color);
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -19,7 +19,7 @@ main {
 }
 
 main > .heading_wrapper {
-  margin-left: 1rem;
+  margin-left: 2rem;
   font-family: var(--body-text);
   grid-column: 1 / span 2;
   grid-row: 1 / span 1;
@@ -49,24 +49,19 @@ main > .heading_wrapper h1 {
 
 h2 {
   text-transform: uppercase;
+  font-family: var(--headings-text);
+  font-size: 1.6rem;
+  font-weight: 500;
 }
 
 h2 {
-  margin-top: 0;
   margin-bottom: 2rem;
 }
-
-/* h1 {
-  grid-column: 1 / span 2;
-  grid-row: 1 / span 1;
-  margin-left: calc(2rem + 1vw);
-  margin-bottom: 4rem;
-} */
 
 .mission_text {
   grid-column: 1 / span 1;
   grid-row: 2 / span 1;
-  padding: 0 calc(2rem + 1vw);
+  padding: 0 calc(2rem + 2vw);
   line-height: 1.5rem;
 }
 
@@ -120,11 +115,20 @@ h2 {
   .main_footer.about_us_footer {
     margin-top: 3rem;
   }
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    margin-top: 4rem;
+  }
 }
 
 @media screen and (max-width: 700px) {
   main {
-    font-size: calc(0.9rem + 0.4vw);
     grid-template-columns: 1fr 1fr;
     grid-row: min-content 1fr min-content min-content;
   }
@@ -148,18 +152,9 @@ h2 {
 }
 
 @media screen and (max-width: 500px) {
-  main {
-    margin-top: 5rem;
-  }
-
-  h1 {
-    margin-bottom: 2rem;
-    margin-left: calc(1rem + 0.5vw);
-  }
-
   .perfect_bag_text,
   .mission_text {
-    padding: 0 calc(1rem + 0.5vw);
+    padding: 0 calc(1.8rem + 0.5vw);
   }
 
   .perfect_bag_text {

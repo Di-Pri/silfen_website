@@ -1,10 +1,15 @@
 header {
   z-index: 5;
+  top: 0;
 }
 
 main {
-  padding-top: 98px;
+  margin-top: 8rem;
   color: var(--font-color);
+}
+
+footer.main_footer {
+  margin-top: 0;
 }
 
 .front_sections {
@@ -20,7 +25,7 @@ main {
 }
 
 main > .heading_wrapper {
-  margin-left: 1rem;
+  margin-left: 2rem;
   font-family: var(--body-text);
   grid-column: 1 / span 2;
   grid-row: 1 / span 1;
@@ -89,7 +94,7 @@ main > .heading_wrapper h1 {
 
 @media screen and (max-width: 850px) {
   main {
-    padding-top: 60px;
+    margin-top: 5rem;
   }
 
   .front_sections img:nth-child(2) {
