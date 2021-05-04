@@ -115,6 +115,7 @@ filterForm.addEventListener("submit", (e) => {
       return `"` + item.value + `"`;
     })
     .join(",");
+  console.log(category);
   //console.log(categoryString);
   let collection = filterForm.elements.collection.selectedOptions;
   collection = Array.from(collection);
@@ -135,6 +136,7 @@ filterForm.addEventListener("submit", (e) => {
           url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"new":true,"price_current":{"$bt":[${priceFrom},${priceTo}]},"colors":{"$in":[${colorsString}]},"material":{"$in":[${materialString}]},"category":{"$in":[${categoryString}]},"collection":{"$in":[${collectionString}]}}`;
         } else {
           url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"new":true,"price_current":{"$bt":[${priceFrom},${priceTo}]},"colors":{"$in":[${colorsString}]},"material":{"$in":[${materialString}]},"category":{"$in":[${categoryString}]}}`;
+          console.log(categoryString);
         }
       } else {
         if (collection.length > 0) {

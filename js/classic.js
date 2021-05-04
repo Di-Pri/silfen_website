@@ -1,6 +1,6 @@
 window.addEventListener("load", start);
 let priceTo = 600;
-let priceFrom = 200;
+let priceFrom = 49;
 let url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&&q={"collection":"Classic","price_current":{"$bt":[${priceFrom},${priceTo}]}}`;
 //let url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"collection":"Classic"}`;
 const options = {
