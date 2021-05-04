@@ -82,8 +82,20 @@ function showProducts(products) {
       productsClone.querySelector(".item_icons_recycled").style.display =
         "none";
     }
-
+    productsClone
+      .querySelector("svg.icon")
+      .addEventListener("click", addClicked);
     parentEl.appendChild(productsClone);
+  });
+}
+
+function addClicked() {
+  console.log(this);
+  this.removeEventListener("click", addClicked);
+  this.classList.add("clicked");
+  this.addEventListener("click", () => {
+    this.classList.remove("clicked");
+    this.addEventListener("click", addClicked);
   });
 }
 

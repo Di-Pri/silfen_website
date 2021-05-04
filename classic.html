@@ -419,13 +419,15 @@
         </div>
       </section>
       <template class="products_template">
-        <a href="#" class="products_link">
-          <article class="products_item">
+        <article class="products_item">
+          <a href="#" class="products_link">
             <img
               src="assets/images/hardcoded/bag2.jpg"
               alt="alexandra"
               class="products_thumbnail"
             />
+          </a>
+          <div class="item_icons_wrapper">
             <div class="item_icons">
               <div class="item_icons_sale"><span>20</span>%</div>
               <div class="item_icons_recycled">
@@ -436,19 +438,26 @@
                 />
               </div>
             </div>
-            <h3 class="products_title">Alexandra</h3>
-            <p class="products_price">
-              <span class="sale_price"
-                ><span class="sale_price_number">150</span> DKK</span
-              >&nbsp;<span class="regular_price"
-                ><span class="regular_price_number"> 300</span> DKK</span
-              >
-            </p>
-            <div class="products_item_hover">
-              <span>Add to cart</span>
+            <div class="item_icons_right">
+              <svg class="icon" width="20" height="19">
+                <use
+                  xlink:href="assets/images/icons/heart_sprite.svg#heart"
+                ></use>
+              </svg>
             </div>
-          </article>
-        </a>
+          </div>
+          <h3 class="products_title">Alexandra</h3>
+          <p class="products_price">
+            <span class="sale_price"
+              ><span class="sale_price_number">150</span> DKK</span
+            >&nbsp;<span class="regular_price"
+              ><span class="regular_price_number"> 300</span> DKK</span
+            >
+          </p>
+          <div class="products_item_hover">
+            <span>Add to cart</span>
+          </div>
+        </article>
       </template>
     </main>
     <div class="loader_container">
