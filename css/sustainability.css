@@ -6,7 +6,7 @@ header {
 main {
   margin-top: 8rem;
   color: var(--font-color);
-  font-size: 14px;
+  font-size: 15.5px;
 }
 
 footer.main_footer {
@@ -20,7 +20,7 @@ footer.main_footer {
 }
 
 main > .heading_wrapper {
-  margin-left: 1rem;
+  margin-left: 2rem;
   font-family: var(--body-text);
   grid-column: 1 / span 2;
   grid-row: 1 / span 1;
@@ -47,14 +47,6 @@ main > .heading_wrapper h1 {
   font-weight: 600;
 }
 /* breadcrumbs styling end */
-
-/* h1 {
-  margin-left: 1rem;
-  font-size: 1.8rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  font-family: var(--headings-text);
-} */
 
 h2 {
   text-transform: uppercase;
@@ -99,7 +91,7 @@ h3 {
 
 @media screen and (max-width: 1250px) {
   .sus_flex div {
-    margin: 0 1rem;
+    margin: 0 1.5rem;
   }
 }
 

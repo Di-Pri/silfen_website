@@ -13,7 +13,7 @@ header {
 
 main {
   padding: 0 1rem;
-  margin-top: 8rem;
+  margin-top: 7rem;
   display: grid;
   grid-template-columns: 0.3fr 0.7fr;
   grid-template-rows: calc(100px + 5vw) 1fr;
@@ -702,13 +702,17 @@ img.icon_pagination {
 
   main {
     margin: 1rem;
+    margin-top: 4rem;
     grid-template-columns: 1fr;
     grid-template-rows: min-content 100px 1fr;
   }
 
+  main > .heading_wrapper {
+    margin-left: 0;
+  }
+
   main > h1 {
     margin-left: 0;
-    margin-top: 5rem;
     grid-column: 1 / span 1;
     grid-row: 1 / span 1;
   }
