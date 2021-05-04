@@ -1,3 +1,110 @@
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("product");
+console.log(id);
+
+const url =
+  "https://kea0209-5a57.restdb.io/rest/products/" + id + "?fetchchildren=true";
+
+function getData() {
+  fetch(url, {
+    method: "GET",
+    headers: {
+      "x-apikey": "6082d28c28bf9b609975a5db",
+    },
+  })
+    .then((res) => res.json())
+    .then((response) => {
+      //console.log(response);
+      showProduct(response);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+}
+
+getData();
+
+function showProduct(product) {
+  //console.log(product);
+  document.querySelector("title").textContent =
+    product.title.charAt(0).toUpperCase() + product.title.slice(1);
+  document.querySelector(".product-description h1").textContent = product.title;
+  if (product.sale) {
+    document.querySelector(".price_current_number").textContent =
+      product.price_current;
+    document.querySelector(".price_regular_number").textContent =
+      product.price_regular;
+  } else {
+    document.querySelector(".price_current").style.display = "none";
+    document.querySelector(".price_regular").style.textDecoration = "none";
+  }
+  document.querySelector("#parag1").textContent = product.description;
+
+  document.querySelector("#parag2").innerHTML = product.details;
+  document.querySelector("#imageBox").src = product.primary_images[0].link;
+  document.querySelector("#imageBox").alt = product.title;
+
+  let color = product.primary_images[0].color;
+  console.log(color);
+  const smallImageTemplate = document.querySelector(".secondary_image_template")
+    .content;
+  // console.log(smallImageTemplate);
+  const smallImageParent = document.querySelector(".product-small-img");
+  product.secondary_images.forEach((elem) => {
+    //console.log(elem);
+    if (elem.color == color) {
+      const smallImageClone = smallImageTemplate.cloneNode(true);
+      //console.log(smallImageClone);
+      smallImageClone.querySelector(".secondary_image").src = elem.link;
+      //console.log(smallImageClone.querySelector(".secondary_image"));
+      smallImageParent.appendChild(smallImageClone);
+    }
+  });
+  const colorpickerTemplate = document.querySelector(".colorpicker_images")
+    .content;
+  //console.log(colorpickerTemplate);
+  const colorParent = document.querySelector(".colorpicker");
+  product.primary_images.forEach((elem) => {
+    //console.log(elem);
+    if (elem.color == color) {
+      document.querySelector("#imageBox").src = elem.link;
+      //console.log(elem.link);
+    }
+    const colorpickerClone = colorpickerTemplate.cloneNode(true);
+    //console.log(colorpickerClone);
+    colorpickerClone.querySelector(".colorpicker_image").src = elem.link;
+    colorpickerClone.querySelector(".colorpicker_image").dataset.color =
+      elem.color;
+    colorParent.appendChild(colorpickerClone);
+  });
+
+  document.querySelectorAll(".colorpicker_image").forEach((image) => {
+    image.addEventListener("click", function (e) {
+      console.log(this.dataset.color);
+      color = this.dataset.color;
+      console.log(color);
+      product.primary_images.forEach((elem) => {
+        if (elem.color == color) {
+          document.querySelector("#imageBox").src = elem.link;
+          console.log(elem.color);
+          console.log(elem.link);
+        }
+      });
+      smallImageParent.innerHTML = "";
+      product.secondary_images.forEach((elem) => {
+        //console.log(elem);
+        if (elem.color == color) {
+          const smallImageClone = smallImageTemplate.cloneNode(true);
+          //console.log(smallImageClone);
+          smallImageClone.querySelector(".secondary_image").src = elem.link;
+          //console.log(smallImageClone.querySelector(".secondary_image"));
+          smallImageParent.appendChild(smallImageClone);
+        }
+      });
+    });
+  });
+}
+
 const parag1 = document.querySelector("#parag1");
 const parag2 = document.querySelector("#parag2");
 const parag3 = document.querySelector("#parag3");

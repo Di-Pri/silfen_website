@@ -1,8 +1,8 @@
 window.addEventListener("load", start);
-// let url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"new":true}`;
 let priceTo = 600;
 let priceFrom = 200;
-let url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&&q={"new":true,"price_current":{"$bt":[${priceFrom},${priceTo}]}}`;
+let url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&&q={"collection":"Recycled","price_current":{"$bt":[${priceFrom},${priceTo}]}}`;
+//let url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"collection":"Recycled"}`;
 const options = {
   method: "GET",
   headers: {
@@ -116,14 +116,14 @@ filterForm.addEventListener("submit", (e) => {
     })
     .join(",");
   //console.log(categoryString);
-  let collection = filterForm.elements.collection.selectedOptions;
-  collection = Array.from(collection);
-  const collectionString = collection
-    .map((item) => {
-      return `"` + item.value + `"`;
-    })
-    .join(",");
-  console.log(collectionString);
+  // let collection = filterForm.elements.collection.selectedOptions;
+  // collection = Array.from(collection);
+  // const collectionString = collection
+  //   .map((item) => {
+  //     return `"` + item.value + `"`;
+  //   })
+  //   .join(",");
+  // console.log(collectionString);
 
   priceFrom = filterForm.elements.price_from.value;
   priceTo = filterForm.elements.price_to.value;
@@ -131,61 +131,29 @@ filterForm.addEventListener("submit", (e) => {
   if (colors.length > 0) {
     if (material.length > 0) {
       if (category.length > 0) {
-        if (collection.length > 0) {
-          url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"new":true,"price_current":{"$bt":[${priceFrom},${priceTo}]},"colors":{"$in":[${colorsString}]},"material":{"$in":[${materialString}]},"category":{"$in":[${categoryString}]},"collection":{"$in":[${collectionString}]}}`;
-        } else {
-          url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"new":true,"price_current":{"$bt":[${priceFrom},${priceTo}]},"colors":{"$in":[${colorsString}]},"material":{"$in":[${materialString}]},"category":{"$in":[${categoryString}]}}`;
-        }
+        url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"collection":"Recycled","price_current":{"$bt":[${priceFrom},${priceTo}]},"colors":{"$in":[${colorsString}]},"material":{"$in":[${materialString}]},"category":{"$in":[${categoryString}]}}`;
       } else {
-        if (collection.length > 0) {
-          url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"new":true,"price_current":{"$bt":[${priceFrom},${priceTo}]},"colors":{"$in":[${colorsString}]},"material":{"$in":[${materialString}]},"collection":{"$in":[${collectionString}]}}`;
-        } else {
-          url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"new":true,"price_current":{"$bt":[${priceFrom},${priceTo}]},"colors":{"$in":[${colorsString}]},"material":{"$in":[${materialString}]}}`;
-        }
+        url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"collection":"Recycled","price_current":{"$bt":[${priceFrom},${priceTo}]},"colors":{"$in":[${colorsString}]},"material":{"$in":[${materialString}]}}`;
       }
     } else {
       if (category.length > 0) {
-        if (collection.length > 0) {
-          url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"new":true,"price_current":{"$bt":[${priceFrom},${priceTo}]},"colors":{"$in":[${colorsString}]},"category":{"$in":[${categoryString}]},"collection":{"$in":[${collectionString}]}}`;
-        } else {
-          url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"new":true,"price_current":{"$bt":[${priceFrom},${priceTo}]},"colors":{"$in":[${colorsString}]},"category":{"$in":[${categoryString}]}}`;
-        }
+        url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"collection":"Recycled","price_current":{"$bt":[${priceFrom},${priceTo}]},"colors":{"$in":[${colorsString}]},"category":{"$in":[${categoryString}]}}`;
       } else {
-        if (collection.length > 0) {
-          url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"new":true,"price_current":{"$bt":[${priceFrom},${priceTo}]},"colors":{"$in":[${colorsString}]},"collection":{"$in":[${collectionString}]}}`;
-        } else {
-          url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"new":true,"price_current":{"$bt":[${priceFrom},${priceTo}]},"colors":{"$in":[${colorsString}]}}`;
-        }
+        url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"collection":"Recycled","price_current":{"$bt":[${priceFrom},${priceTo}]},"colors":{"$in":[${colorsString}]}}`;
       }
     }
   } else {
     if (material.length > 0) {
       if (category.length > 0) {
-        if (collection.length > 0) {
-          url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"new":true,"price_current":{"$bt":[${priceFrom},${priceTo}]},"material":{"$in":[${materialString}]},"category":{"$in":[${categoryString}]},"collection":{"$in":[${collectionString}]}}`;
-        } else {
-          url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"new":true,"price_current":{"$bt":[${priceFrom},${priceTo}]},"material":{"$in":[${materialString}]},"category":{"$in":[${categoryString}]}}`;
-        }
+        url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"collection":"Recycled","price_current":{"$bt":[${priceFrom},${priceTo}]},"material":{"$in":[${materialString}]},"category":{"$in":[${categoryString}]}}`;
       } else {
-        if (collection.length > 0) {
-          url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"new":true,"price_current":{"$bt":[${priceFrom},${priceTo}]},"material":{"$in":[${materialString}]},"collection":{"$in":[${collectionString}]}}`;
-        } else {
-          url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"new":true,"price_current":{"$bt":[${priceFrom},${priceTo}]},"material":{"$in":[${materialString}]}}`;
-        }
+        url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"collection":"Recycled","price_current":{"$bt":[${priceFrom},${priceTo}]},"material":{"$in":[${materialString}]}}`;
       }
     } else {
       if (category.length > 0) {
-        if (collection.length > 0) {
-          url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"new":true,"price_current":{"$bt":[${priceFrom},${priceTo}]},"category":{"$in":[${categoryString}]},"collection":{"$in":[${collectionString}]}}`;
-        } else {
-          url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"new":true,"price_current":{"$bt":[${priceFrom},${priceTo}]},"category":{"$in":[${categoryString}]}}`;
-        }
+        url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"collection":"Recycled","price_current":{"$bt":[${priceFrom},${priceTo}]},"category":{"$in":[${categoryString}]}}`;
       } else {
-        if (collection.length > 0) {
-          url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"new":true,"price_current":{"$bt":[${priceFrom},${priceTo}]},"collection":{"$in":[${collectionString}]}}`;
-        } else {
-          url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"new":true,"price_current":{"$bt":[${priceFrom},${priceTo}]}}`;
-        }
+        url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&q={"collection":"Recycled","price_current":{"$bt":[${priceFrom},${priceTo}]}}`;
       }
     }
   }
@@ -222,14 +190,14 @@ function resetFilter() {
     item.selected = false;
   });
 
-  let collectionSelected = filterForm.elements.collection.selectedOptions;
-  collectionSelected = Array.from(collectionSelected);
-  collectionSelected.forEach((item) => {
-    item.selected = false;
-  });
+  // let collectionSelected = filterForm.elements.collection.selectedOptions;
+  // collectionSelected = Array.from(collectionSelected);
+  // collectionSelected.forEach((item) => {
+  //   item.selected = false;
+  // });
 
   document.querySelector(".products_content").innerHTML = "";
-  url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&&q={"new":true,"price_current":{"$bt":[${priceFrom},${priceTo}]}}`;
+  url = `https://kea0209-5a57.restdb.io/rest/products?fetchchildren=true&&q={"collection":"Recycled","price_current":{"$bt":[${priceFrom},${priceTo}]}}`;
   document.querySelector(".loader_container").style.display = "block";
   document.querySelector(".reset_filter_btn").disabled = true;
   start();

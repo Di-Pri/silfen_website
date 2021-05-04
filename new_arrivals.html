@@ -78,13 +78,21 @@
               />
             </div>
             <ul class="hidden" id="dropdown_content1">
-              <li><a href="#">Bumbags</a></li>
-              <li><a href="#">Shoulder bags</a></li>
-              <li><a href="#">Crossbody bags</a></li>
-              <li><a href="#">Wallets</a></li>
-              <li><a href="#">Tote bags</a></li>
-              <li><a href="#">Mini bags</a></li>
-              <li><a href="#">Care products</a></li>
+              <li><a href="category.html?category=Bumbags">Bumbags</a></li>
+              <li>
+                <a href="category.html?category=Shoulder bags">Shoulder bags</a>
+              </li>
+              <li>
+                <a href="category.html?category=Crossbody bags"
+                  >Crossbody bags</a
+                >
+              </li>
+              <li><a href="category.html?category=Wallets">Wallets</a></li>
+              <li><a href="category.html?category=Tote bags">Tote bags</a></li>
+              <li><a href="category.html?category=Mini bags">Mini bags</a></li>
+              <li>
+                <a href="category.html?category=Care products">Care products</a>
+              </li>
             </ul>
           </li>
           <li class="menu_dropdown">
@@ -123,7 +131,7 @@
             <div class="multi-range-slider">
               <input
                 type="range"
-                name="price-from"
+                name="price_from"
                 id="input-left"
                 min="49"
                 max="799"
@@ -135,7 +143,7 @@
 
               <input
                 type="range"
-                name="price-to"
+                name="price_to"
                 id="input-right"
                 min="49"
                 max="799"
@@ -182,7 +190,7 @@
               <label for="green" class="check_green"></label>
             </div>
             <div class="check">
-              <input type="checkbox" name="gray" id="gray" />
+              <input type="checkbox" name="grey" id="gray" />
               <label for="gray" class="check_gray"></label>
             </div>
             <div class="check">
@@ -264,6 +272,9 @@
           </select>
           <div class="select_divider"></div>
           <input type="submit" value="Apply filter" class="filter_submit" />
+          <button type="button" class="reset_filter_btn" disabled>
+            Reset filter
+          </button>
         </form>
         <div class="filter_heading_mobile">
           <h2>Filter</h2>
@@ -369,281 +380,7 @@
         <!-- filter_mobile end -->
       </aside>
       <section class="products">
-        <div class="products_content">
-          <a href="#" class="products_link">
-            <article class="products_item">
-              <img
-                src="assets/images/hardcoded/bag1.jpg"
-                alt="alexandra"
-                class="products_thumbnail"
-              />
-              <div class="item_icons">
-                <div class="item_icons_sale">-<span>20</span>%</div>
-                <div class="item_icons_recycled">
-                  <img
-                    src="assets/images/icons/recycled.svg"
-                    alt="recycled"
-                    class="recycled"
-                  />
-                </div>
-              </div>
-              <h3 class="products_title">Alexandra</h3>
-              <p class="products_price">
-                <span class="sale_price"
-                  ><span class="sale_price_number">150</span> DKK</span
-                >&nbsp;<span class="regular_price"
-                  ><span class="regular_price_number">300</span> DKK</span
-                >
-              </p>
-              <div class="products_item_hover">
-                <span>Add to cart</span>
-              </div>
-            </article>
-          </a>
-          <a href="#" class="products_link">
-            <article class="products_item">
-              <img
-                src="assets/images/hardcoded/bag2.jpg"
-                alt="alexandra"
-                class="products_thumbnail"
-              />
-              <div class="item_icons">
-                <div class="item_icons_sale">-<span>20</span>%</div>
-                <div class="item_icons_recycled">
-                  <img
-                    src="assets/images/icons/recycled.svg"
-                    alt="recycled"
-                    class="recycled"
-                  />
-                </div>
-              </div>
-              <h3 class="products_title">Alexandra</h3>
-              <p class="products_price">
-                <span class="sale_price"
-                  ><span class="sale_price_number">150</span> DKK</span
-                >&nbsp;<span class="regular_price"
-                  ><span class="regular_price_number"> 300</span> DKK</span
-                >
-              </p>
-              <div class="products_item_hover">
-                <span>Add to cart</span>
-              </div>
-            </article>
-          </a>
-          <a href="#" class="products_link">
-            <article class="products_item">
-              <img
-                src="assets/images/hardcoded/bag3.jpg"
-                alt="alexandra"
-                class="products_thumbnail"
-              />
-              <div class="item_icons">
-                <div class="item_icons_sale">-<span>20</span>%</div>
-                <div class="item_icons_recycled">
-                  <img
-                    src="assets/images/icons/recycled.svg"
-                    alt="recycled"
-                    class="recycled"
-                  />
-                </div>
-              </div>
-              <h3 class="products_title">Alexandra</h3>
-              <p class="products_price">
-                <span class="sale_price"
-                  ><span class="sale_price_number">150</span> DKK</span
-                >&nbsp;<span class="regular_price"
-                  ><span class="regular_price_number"> 300</span> DKK</span
-                >
-              </p>
-              <div class="products_item_hover">
-                <span>Add to cart</span>
-              </div>
-            </article>
-          </a>
-          <a href="#" class="products_link">
-            <article class="products_item">
-              <img
-                src="assets/images/hardcoded/bag4.jpg"
-                alt="alexandra"
-                class="products_thumbnail"
-              />
-              <h3 class="products_title">Alexandra</h3>
-              <p class="products_price">
-                <span class="sale_price"
-                  ><span class="sale_price_number">150</span> DKK</span
-                ><span class="regular_price"
-                  >&nbsp;<span class="regular_price_number"> 300</span>
-                  DKK</span
-                >
-              </p>
-              <div class="products_item_hover">
-                <span>Add to cart</span>
-              </div>
-            </article>
-          </a>
-          <a href="#" class="products_link">
-            <article class="products_item">
-              <img
-                src="assets/images/hardcoded/bag1.jpg"
-                alt="alexandra"
-                class="products_thumbnail"
-              />
-              <h3 class="products_title">Alexandra</h3>
-              <p class="products_price">
-                <span class="sale_price"
-                  ><span class="sale_price_number">150</span> DKK</span
-                ><span class="regular_price"
-                  >&nbsp;<span class="regular_price_number"> 300</span>
-                  DKK</span
-                >
-              </p>
-              <div class="products_item_hover">
-                <span>Add to cart</span>
-              </div>
-            </article>
-          </a>
-          <a href="#" class="products_link">
-            <article class="products_item">
-              <img
-                src="assets/images/hardcoded/bag2.jpg"
-                alt="alexandra"
-                class="products_thumbnail"
-              />
-              <h3 class="products_title">Alexandra</h3>
-              <p class="products_price">
-                <span class="sale_price"
-                  ><span class="sale_price_number">150</span> DKK</span
-                ><span class="regular_price"
-                  >&nbsp;<span class="regular_price_number"> 300</span>
-                  DKK</span
-                >
-              </p>
-              <div class="products_item_hover">
-                <span>Add to cart</span>
-              </div>
-            </article>
-          </a>
-          <a href="#" class="products_link">
-            <article class="products_item">
-              <img
-                src="assets/images/hardcoded/bag3.jpg"
-                alt="alexandra"
-                class="products_thumbnail"
-              />
-              <h3 class="products_title">Alexandra</h3>
-              <p class="products_price">
-                <span class="sale_price"
-                  ><span class="sale_price_number">150</span> DKK</span
-                >&nbsp;<span class="regular_price"
-                  ><span class="regular_price_number"> 300</span> DKK</span
-                >
-              </p>
-              <div class="products_item_hover">
-                <span>Add to cart</span>
-              </div>
-            </article>
-          </a>
-          <a href="#" class="products_link">
-            <article class="products_item">
-              <img
-                src="assets/images/hardcoded/bag4.jpg"
-                alt="alexandra"
-                class="products_thumbnail"
-              />
-              <h3 class="products_title">Alexandra</h3>
-              <p class="products_price">
-                <span class="sale_price"
-                  ><span class="sale_price_number">150</span> DKK</span
-                >&nbsp;<span class="regular_price"
-                  ><span class="regular_price_number"> 300</span> DKK</span
-                >
-              </p>
-              <div class="products_item_hover">
-                <span>Add to cart</span>
-              </div>
-            </article>
-          </a>
-          <a href="#" class="products_link">
-            <article class="products_item">
-              <img
-                src="assets/images/hardcoded/bag1.jpg"
-                alt="alexandra"
-                class="products_thumbnail"
-              />
-              <h3 class="products_title">Alexandra</h3>
-              <p class="products_price">
-                <span class="sale_price"
-                  ><span class="sale_price_number">150</span> DKK</span
-                >&nbsp;<span class="regular_price"
-                  ><span class="regular_price_number"> 300</span> DKK</span
-                >
-              </p>
-              <div class="products_item_hover">
-                <span>Add to cart</span>
-              </div>
-            </article>
-          </a>
-          <a href="#" class="products_link">
-            <article class="products_item">
-              <img
-                src="assets/images/hardcoded/bag2.jpg"
-                alt="alexandra"
-                class="products_thumbnail"
-              />
-              <h3 class="products_title">Alexandra</h3>
-              <p class="products_price">
-                <span class="sale_price"
-                  ><span class="sale_price_number">150</span> DKK</span
-                >&nbsp;<span class="regular_price"
-                  ><span class="regular_price_number"> 300</span> DKK</span
-                >
-              </p>
-              <div class="products_item_hover">
-                <span>Add to cart</span>
-              </div>
-            </article>
-          </a>
-          <a href="#" class="products_link">
-            <article class="products_item">
-              <img
-                src="assets/images/hardcoded/bag3.jpg"
-                alt="alexandra"
-                class="products_thumbnail"
-              />
-              <h3 class="products_title">Alexandra</h3>
-              <p class="products_price">
-                <span class="sale_price"
-                  ><span class="sale_price_number">150</span> DKK</span
-                >&nbsp;<span class="regular_price"
-                  ><span class="regular_price_number"> 300</span> DKK</span
-                >
-              </p>
-              <div class="products_item_hover">
-                <span>Add to cart</span>
-              </div>
-            </article>
-          </a>
-          <a href="#" class="products_link">
-            <article class="products_item">
-              <img
-                src="assets/images/hardcoded/bag4.jpg"
-                alt="alexandra"
-                class="products_thumbnail"
-              />
-              <h3 class="products_title">Alexandra</h3>
-              <p class="products_price">
-                <span class="sale_price"
-                  ><span class="sale_price_number">150</span> DKK</span
-                >&nbsp;<span class="regular_price"
-                  ><span class="regular_price_number"> 300</span> DKK</span
-                >
-              </p>
-              <div class="products_item_hover">
-                <span>Add to cart</span>
-              </div>
-            </article>
-          </a>
-        </div>
+        <div class="products_content"></div>
         <footer class="products_footer">
           <span class="page_active">1</span>
           <span>2</span>
@@ -656,8 +393,51 @@
             />
           </span>
         </footer>
+        <div class="filter_empty hidden">
+          <p>No product matches your query. Try to adjust the filter.</p>
+        </div>
       </section>
+      <template class="products_template">
+        <a href="#" class="products_link">
+          <article class="products_item">
+            <img
+              src="assets/images/hardcoded/bag2.jpg"
+              alt="alexandra"
+              class="products_thumbnail"
+            />
+            <div class="item_icons">
+              <div class="item_icons_sale"><span>20</span>%</div>
+              <div class="item_icons_recycled">
+                <img
+                  src="assets/images/icons/recycled.svg"
+                  alt="recycled"
+                  class="recycled"
+                />
+              </div>
+            </div>
+            <h3 class="products_title">Alexandra</h3>
+            <p class="products_price">
+              <span class="sale_price"
+                ><span class="sale_price_number">150</span> DKK</span
+              >&nbsp;<span class="regular_price"
+                ><span class="regular_price_number"> 300</span> DKK</span
+              >
+            </p>
+            <div class="products_item_hover">
+              <span>Add to cart</span>
+            </div>
+          </article>
+        </a>
+      </template>
     </main>
+    <div class="loader_container">
+      <div class="loader">
+        <span class="dot dot_1"></span>
+        <span class="dot dot_2"></span>
+        <span class="dot dot_3"></span>
+        <span class="dot dot_4"></span>
+      </div>
+    </div>
     <footer class="main_footer">
       <div class="about">
         <div class="footer_heading_wrapper">
@@ -801,6 +581,7 @@
       </section>
     </footer>
     <script src="js/main.js"></script>
+    <script src="js/filter.js"></script>
     <script src="js/new_arrivals.js"></script>
   </body>
 </html>

@@ -82,13 +82,21 @@
               />
             </div>
             <ul class="hidden" id="dropdown_content1">
-              <li><a href="#">Bumbags</a></li>
-              <li><a href="#">Shoulder bags</a></li>
-              <li><a href="#">Crossbody bags</a></li>
-              <li><a href="#">Wallets</a></li>
-              <li><a href="#">Tote bags</a></li>
-              <li><a href="#">Mini bags</a></li>
-              <li><a href="#">Care products</a></li>
+              <li><a href="category.html?category=Bumbags">Bumbags</a></li>
+              <li>
+                <a href="category.html?category=Shoulder bags">Shoulder bags</a>
+              </li>
+              <li>
+                <a href="category.html?category=Crossbody bags"
+                  >Crossbody bags</a
+                >
+              </li>
+              <li><a href="category.html?category=Wallets">Wallets</a></li>
+              <li><a href="category.html?category=Tote bags">Tote bags</a></li>
+              <li><a href="category.html?category=Mini bags">Mini bags</a></li>
+              <li>
+                <a href="category.html?category=Care products">Care products</a>
+              </li>
             </ul>
           </li>
           <li class="menu_dropdown">
@@ -123,7 +131,7 @@
         <div class="product-imgs">
           <div class="gallery">
             <div class="product-small-img">
-              <img
+              <!-- <img
                 src="assets/images/photos/siri-main.jpg"
                 alt=""
                 onclick="myFunction(this)"
@@ -147,15 +155,11 @@
                 src="assets/images/photos/siri-secondary2.jpg"
                 alt=""
                 onclick="myFunction(this)"
-              />
+              /> -->
             </div>
             <div class="featured">
               <div class="img-container">
-                <img
-                  id="imageBox"
-                  src="assets/images/photos/siri-main.jpg"
-                  alt=""
-                />
+                <img id="imageBox" src="" alt="" />
               </div>
             </div>
           </div>
@@ -165,9 +169,16 @@
         </div>
         <div class="product-description">
           <h1>Siri</h1>
-          <h3 class="price">300 DKK</h3>
+          <h3 class="price">
+            <span class="price_current"
+              ><span class="price_current_number">300</span> DKK</span
+            >
+            <span class="price_regular">
+              <span class="price_regular_number">400</span> DKK
+            </span>
+          </h3>
           <div class="colorpicker">
-            <img
+            <!-- <img
               src="assets/images/photos/siri-main-zebra.jpg"
               alt=""
               onclick="myFunction(this)"
@@ -186,7 +197,7 @@
               src="assets/images/photos/siri-main-black.jpg"
               alt=""
               onclick="myFunction(this)"
-            />
+            /> -->
           </div>
           <div class="options">
             <div class="qty-flex">
@@ -303,6 +314,22 @@
           </div>
         </div>
       </div>
+      <template class="colorpicker_images">
+        <img
+          src=""
+          alt=""
+          class="colorpicker_image"
+          onclick="myFunction(this)"
+        />
+      </template>
+      <template class="secondary_image_template">
+        <img
+          src="assets/images/hardcoded/bag1.jpg"
+          alt=""
+          class="secondary_image"
+          onclick="myFunction(this)"
+        />
+      </template>
     </main>
     <footer class="main_footer">
       <div class="about">
