@@ -99,12 +99,8 @@ function clearForm() {
 }
 
 // dropdowns in the footer
-const aboutFooterWrapper = document.querySelector(
-  ".about > .footer_heading_wrapper"
-);
-const faqFooterWrapper = document.querySelector(
-  ".faq > .footer_heading_wrapper"
-);
+const aboutFooterWrapper = document.querySelector(".about > .footer_heading_wrapper");
+const faqFooterWrapper = document.querySelector(".faq > .footer_heading_wrapper");
 
 //console.log(aboutFooterWrapper, faqFooterWrapper);
 
@@ -132,3 +128,22 @@ function openFooterSection() {
     this.addEventListener("click", openFooterSection);
   }
 }
+
+// carousel
+
+document.querySelectorAll(".insta-buttons").forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const ul = document.querySelector(".customers_flex");
+    let amount = ul.firstElementChild.offsetWidth;
+
+    if (e.target.id === "instagram_left") {
+      console.log("left");
+      amount = amount * -1;
+    }
+
+    ul.scrollBy({
+      left: amount,
+      behavior: "smooth",
+    });
+  });
+});

@@ -60,7 +60,6 @@ footer.main_footer {
   font-size: 1.2rem;
   display: inline-block;
   border: 1px solid var(--font-color);
-  background-color: white;
   background: rgba(255, 255, 255, 0.8);
   padding: 0.6rem;
   width: 14rem;
@@ -85,6 +84,7 @@ a.video_button:hover {
 
 .customers {
   position: relative;
+  overflow: hidden;
 }
 
 .customers h2 {
@@ -97,32 +97,44 @@ a.video_button:hover {
 
 #instagram_left {
   position: absolute;
-  transform: rotate(180deg);
   width: 45px;
   left: 10px;
-  top: 53%;
+  top: 52%;
   z-index: 1;
+  cursor: pointer;
 }
 
 #instagram_right {
   position: absolute;
+  transform: rotate(180deg);
   width: 45px;
   right: 10px;
-  top: 53%;
+  top: 52%;
   z-index: 1;
+  cursor: pointer;
 }
 
 .customers_flex {
   display: flex;
   gap: 0.35rem;
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+  scroll-snap-type: inline proximity;
+  scroll-padding-inline-start: 0;
 }
 
 .customers_box {
   position: relative;
+  flex: 0 0 250px;
+  scroll-snap-align: start;
+  width: fit-content;
+  height: fit-content;
 }
 
 .customers_profile {
   max-width: 100%;
+  max-height: 100%;
 }
 
 .customers_box:hover .customers_profile {
@@ -134,6 +146,7 @@ a.video_button:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 40px;
   max-width: 100%;
   z-index: 1;
   opacity: 0;
@@ -183,8 +196,5 @@ a.video_button:hover {
   #instagram_left,
   #instagram_right {
     width: 40px;
-  }
-  .customers_flex a:nth-of-type(-n + 4) {
-    display: none;
   }
 }
